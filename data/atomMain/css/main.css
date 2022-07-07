@@ -1,0 +1,290 @@
+@charset "utf-8";
+
+
+/*타이핑효과 리셋*/
+ins,del{text-decoration:none;}
+kbd{font-family:inherit;}
+.timeTp,.certificateTp,.recordTp,.contactTp,.resultTp,.end{font-size:14px;color:#cacaca;padding-left:3%;}
+#time>span{color:#db6d6d; font-size:15px; margin-left:20px;}
+#time>.esc{font-size:12px;color:rgb(140, 140, 140);}
+.typing{font-size:14px;color:#cacaca;padding-left:3%;}
+.t-caret{color:rgb(49, 111, 250);}
+.point1{font-weight:bold; color:#db6d6d;}
+.point2{font-weight:bold; color:#a32e48;}
+.point3{font-weight:bold; color:#e9c533; font-size:11px;}
+.point4{font-weight:bold; color:#21b1b1;}
+.point5{font-weight:bold; color:#93b50a;}
+.point6{font-weight:bold; color:#e2ba1b;}
+img{border:0; vertical-align:top;}
+
+
+.sun{animation: spin 2s ease infinite;
+-webkit-animation: spin 2s ease infinite;
+-moz-animation: spin 2s ease infinite;
+-o-animation: spin 2s ease infinite;
+-ms-animation: spin 2s ease infinite;}
+@keyframes spin{0%{transform: rotate(0deg);} 100%{transform: rotate(360deg);}}
+@-webkit-keyframes spin {0%{-webkit-transform: rotate(0deg);} 100% {-webkit-transform: rotate(360deg);}}
+@-moz-keyframes spin {0%{-moz-transform: rotate(0deg);} 100%{-moz-transform: rotate(360deg);}}
+@-o-keyframes spin {0%{-moz-transform: rotate(0deg);} 100%{-moz-transform: rotate(360deg);}}
+@-ms-keyframes spin {0%{transform: rotate(0deg);} 100%{transform: rotate(360deg);}}
+
+
+
+
+/*-----------모바일--------------------------------------------------*/
+body{font-size:100%; font-family:arial,'맑은 고딕','Malgun Gothic';
+background-color:#282c34;}
+
+/*------header 메뉴부분------*/
+/*--모바일 이외에서 쓰이는 메뉴 하이드--*/
+header>.fixmenuWeb{display:none;}
+header>.fixmenuTab{display:none;}
+
+header{width:100%;height:74px;border-bottom:1px solid #16171c;
+position:fixed;overflow:hidden;z-index:500;}
+header>p{height:24px;background-color:#131418; color:#cacaca;
+line-height:24px;font-size:12px;padding-left:20px;}
+header>span{width:50px; height:50px; line-height:50px; position:absolute;
+right:0;bottom:0;background-color:#21252b;}
+header>span img{display:block; margin:0 auto; margin-top:18px;}
+header>.fixmenuMobile{height:50px; font-size:15px; background-color:#282c34;}
+header>.fixmenuMobile li{display:block;line-height:50px; color:#cacaca;margin-left:25px;}
+header>.fixmenuMobile li img{margin-top:18px;}
+.hide{display:none;}
+
+/*------sub 메뉴부분------*/
+/*--모바일 이외에서 쓰이는 메뉴 하이드--*/
+nav>.subMenuWeb{display:none;}
+
+nav{width:100%; font-size:15px; background-color:#21252b;padding:75px 0 20px 0;
+border-bottom:1px solid #16171c;position:fixed;top:0;z-index:400; display:none;}
+nav>.subMenuMobile{margin:20px 0 10px 50px; color:#cacaca;}
+nav>.subMenuMobile li{padding:5px 0;}
+nav>.subMenuMobile li img{margin-right:5px;}
+nav>.subMenu{width:100%;}
+nav>.subMenu li a img{margin:10px 8px 0 0;}
+nav>.subMenu li a{display:block;line-height:35px;padding-left:90px; color:#cacaca;}
+.check{background-color:#282c32;}
+
+/*------전체 100------*/
+#wrap{width:100%;position:relative;}
+/*------배경 숫자 고정------*/
+#wrap .bgNum{display:none;}
+#wrap .bgNum>p{font-size:12px; line-height:22px;}
+/*------container 컨텐츠 영역------*/
+#container{width:100%; padding-top:75px; font-size:15px;}
+/*------time 시간위치 마진값------*/
+#time{margin:20px 0;}
+/*------certificate 사용가능 기능, 자격증 파트------*/
+#certificate{width:100%;}
+#certificate .certificateTt{display:block; max-width:100%; margin:50px auto 10px;}
+#certificate .certificateBox{background-color:#393d44;}
+.certificateBox>span{display:block;width:100%;height:30px;
+background:url('../img/titleBottomBar.png');}
+/*가능툴부분---*/
+.certificateBox>section{padding:20px 20px 40px;overflow:hidden;}
+.certificateBox>section>h3{width:200px;font-size:15px;color:#bababa; line-height:30px;
+border-bottom:1px solid #282c34; margin-bottom:20px;}
+.certificateBox>section>article{float:left;width:90px;}
+.certificateBox>section>article>h3{font-size:13px; color:#bababa;}
+/*자격증부분---*/
+.certificateBox>section>div{float:left; overflow:hidden;margin-right:20px;}
+.certificateBox>section>div>img{float:left;margin-right:10px;}
+.certificateBox>section>div article{float:left;color:#bababa;font-size:12px;}
+.certificateBox>section>div h3{font-size:13px; color:#d39f2f;line-height:27px;
+border-bottom:1px solid #d39f2f;}
+#certificate .certificateTt:after{content:""; display:block;clear:both;visibility:hidden;}
+
+/*------record 간단이력, 슬라이드 부분------*/
+#record{width:100%;}
+#record .recordTt{display:block; max-width:100%; margin:50px auto 10px;}
+#record .slide{width:100%;height:0;padding-bottom:62%;position:relative; overflow:hidden;
+margin-bottom:80px;}
+#record .slide>span{width:100%;height:30px;position:absolute;top:0;
+background:url('../img/titleBottomBar.png');z-index:100;}
+#record .slide .slideDirect{display: block;width:100%;position:absolute; top:43%;z-index:100;}
+#record .slide .slideDirect a{display:block; width:40px; height:74px;}
+#record .slide .slideDirect .left{float:left;margin-left:3%;}
+#record .slide .slideDirect .right{float:right;margin-right:1%;}
+#record .slide .slideYear{display:block;width:100%;position:absolute;bottom:10px;left:0;
+z-index:100; text-align:center;}
+#record .slide .slideYear a{display:inline;color:#bababa;}
+.yearCheck{color:#21252b !important;}
+#record .slide .slideYear img{margin:0 10px;vertical-align:top;}
+#record .slide>img{display:block;max-width:100%;position:absolute; top:0;left:0;}
+
+/*------contact 연락처 부분------*/
+#contact{width:100%;}
+#contact .contacBox{width:97%; border:1px solid #16171c;margin:0 auto;
+border-radius:10px; overflow:hidden;background-color:#2f333d;position:relative;}
+#contact .contacBox>h3{display:block;font-size:15px; color:#bababa;line-height:50px;
+border-bottom:1px solid #16171c;background:url('../img/siteMakerBar.png');}
+#contact .contacBox>h3>img{margin:20px 5px 0 30px;}
+#contact .contacBox>.me{display:block;margin:30px auto; cursor:pointer;}
+#contact .contacBox .tel{width:166px;height:98px;background:url('../img/telBox.png');
+position:absolute;top:85px;left:10px;padding:20px 0 0 20px;}
+#contact .contacBox .tel h3{font-size:15px;color:#282c34;line-height:20px;}
+#contact .contacBox .tel p{font-size:14px;}
+#contact .contacBox .social{width:146px;height:88px;background:url('../img/socialBox.png');
+position:absolute;bottom:55px;left:10px;padding:30px 0 0 40px;}
+#contact .contacBox .social p{font-size:14px;padding-top:3px;color:#}
+#contact .contacBox .social p>img{margin:2px 10px 0 0 ;}
+#contact .contacBox .name{width:160px;height:103px;background:url('../img/nameBox.png');
+position:absolute;top:235px;right:10px;padding:25px 0 0 35px;}
+#contact .contacBox .name p{color:#ececec; font-size:18px;}
+#contact .contacBox .name p>span{font-size:14px;}
+
+/*------result 포폴링크 영역------*/
+#result{}
+#result .resultTt{display:block; max-width:100%; margin:50px auto 10px;}
+#result .resultBox{width:97%;border:1px solid #987e2b;border-radius:10px;
+background-color:#393d44; overflow:hidden; margin:0 auto 50px;}
+#result .resultBox>h3{display:block;font-size:14px;color:#bababa;line-height:40px;
+border-bottom:1px solid #987e2b;}
+#result .resultBox>h3>img{margin:11px 5px 0 20px;}
+
+#result .resultBox article{width:90%; height:370px; position:relative;
+margin:10px auto 20px; overflow:hidden;}
+#result .resultBox article>a>img{height:100%;}
+#result .resultBox article>h3{display:block; width:98%;
+font-size:14px; line-height:25px;padding-left:3%;
+background-color:rgba(0,0,0,0.7);color:#fff; position:absolute; top:0;left:0;}
+#result .resultBox article>p{width:97%; font-size:13px; position: absolute;
+bottom:0; left:0; background-color:rgba(0,0,0,0.8);color:#fff; padding:1.5%;}
+
+/*------footer-----*/
+footer{width:100%;background-color:#21252b; border-top: 1px solid #16171c;color:#bababa;
+font-size:11px; overflow:hidden;}
+footer p{display:block;line-height:25px;}
+footer p>img{margin:7px 5px 0 0;}
+footer p:first-child{float:left;margin-left:10px;}
+footer p:last-child span{display:inline-block;width:3px; height:3px;
+background-color:#73c990;border-radius:5px; margin-right:20px;}
+footer p:last-child{float:right;margin-right:10px;}
+
+
+/*-----------태블릿--------------------------------------------------*/
+@media all and (min-width:600px) {
+body{font-size:100%; font-family:arial,'맑은 고딕','Malgun Gothic';
+background-color:#282c34;}
+/*------header 메뉴부분------*/
+header>.fixmenuMobile{display:none;}
+header{border-bottom:0;}
+header>span{display:none;}
+header>.fixmenuTab{display:block;width:100%;height:50px; font-size:15px; background-color:#282c34;}
+/*클릭시 배경색 선택li에 줄것++*/
+header>.fixmenuTab li{float:left;width:20%; text-align:center;
+border-right:1px solid #16171c;}
+.menuCheck{background-color:#282c34;border-right:1px solid #282c34;
+border-bottom:1px solid #282c34;}
+header>.fixmenuTab li a{display:block;line-height:50px;
+color:#cacaca;margin-left:0;line-height:49px;}
+header>.fixmenuTab li a img{margin-top:18px;}
+header>.fixmenuTab{background-color:#21252b;height:49px;border-bottom:1px solid #16171c;}
+/*contactInformation메뉴박스 글씨 잘리지 않게 최소 크기지정....*/
+header>.fixmenuTab .minBox{min-width:150px;}
+
+
+
+/*------sub 메뉴부분------*/
+/*--탭에서 서브메뉴 사용안함--*/
+nav{display:none;}
+
+/*------전체 100------*/
+#wrap{width:100%;position:relative;}
+/*------배경 숫자 고정------*/
+#wrap .bgNum{display:block;width:7%;position:absolute; top:75px;left:0;
+background-color:#2f333a;text-align:center;color:#515459;padding-right:3%;
+border-right:1px solid #3e4249;z-index: 300;height:3350px; overflow:hidden;}
+/*------container 컨텐츠 영역------*/
+#container{width:90%; margin-left:10%;height:3350px; overflow:hidden;}
+
+
+/*------record 간단이력, 슬라이드 부분------*/
+#record .slide{max-width:640px;height:400px;padding-bottom:0;margin:0 auto 80px;}
+
+/*------contact 연락처 부분------*/
+#contact .contacBox>h3>img{margin:20px 5px 0 50px;}
+#contact .contacBox .tel{top:155px;left:7%;}
+#contact .contacBox .social{bottom:105px;left:7%;}
+#contact .contacBox .name{top:235px;right:7%;}
+
+/*------result 포폴링크 영역------*/
+#result .resultBox article{width:45%; margin:10px 0 20px 3%; float:left;}
+#result .resultBox article>h3{width:96%;padding-left:4%;}
+#result .resultBox article>p{width:96%; padding:2%;}
+
+/*------footer-----*/
+footer{position:fixed;bottom:0;z-index: 500;}
+footer p:last-child span{ margin-right:40px;}
+
+}
+/*-----------PC--------------------------------------------------*/
+@media all and (min-width:950px) {
+/*body{background:url('../img/bg.jpg');background-repeat:no-repeat;background-attachment: fixed;}*/
+body{background-color:rgb(201, 201, 212);}
+
+/*------header 메뉴부분------*/
+/*--웹 이외에서 쓰이는 메뉴 하이드--*/
+header>span{display:none;}
+header>.fixmenu{display:none;}
+
+header{width:100%; max-width:1050px; height:30px;border-bottom:0; background-color:rgb(125, 40, 34);}
+header>p{display:block;width:26%;height:30px;background-color:#21252b; color:#bababa;
+line-height:30px;font-size:16px;padding-left:0;text-align:center;float:left;
+border-right:1px solid #16171c;float:left; box-sizing: border-box;}
+header>.fixmenuWeb{display:block; width:74%;height:29px;border-bottom:1px solid #16171c;
+background-color:#21252b; float:left;}
+header>.fixmenuWeb li{float:left; width:22%;text-align:center;
+border-right:1px solid #16171c; }
+header>.fixmenuWeb li a{line-height:29px;font-size:15px; color:#bababa;}
+
+/*------sub 메뉴부분------*/
+/*--웹 이외에서 쓰이는 메뉴 하이드--*/
+
+nav>.subMenuMobile{display:none;}
+
+nav{display:block; width:26%;height:3350px;font-size:15px; background-color:#21252b;padding:75px 0 20px 0;
+border-bottom:1px solid #16171c;position:absolute;top:0;z-index:400;
+border-right:1px solid #16171c;float:left; box-sizing: border-box;}
+nav>.subMenuWeb{display:block; color:#cacaca;padding-left:25px;}
+nav>.subMenuWeb li{padding:5px 0;}
+nav>.subMenuWeb li:last-child{padding-left:20px;}
+nav>.subMenuWeb li img{margin-right:5px;}
+nav>.subMenu li a{padding-left:70px;}
+
+/*------전체 100------*/
+#wrap{max-width:1050px;position:relative; margin:0 auto;}
+
+/*------배경 숫자 고정------*/
+#wrap .bgNum{display:block; width:5%; height:3300px; position:absolute;top:30px;
+left:26%;font-size:13px; line-height:22px;
+background-color:#282c34; text-align:center; color:#515459; padding-right:2%;
+border-right:1px solid #3e4249;float:left; height:3300px; overflow:hidden;}
+
+/*------container 컨텐츠 영역------*/
+#container{width:67%; padding-top:50px; font-size:15px; float:right;
+background-color:#282c34;height:3300px; overflow:hidden;}
+
+/*------record 간단이력, 슬라이드 부분------*/
+#record .slide{max-width:100%;}
+
+/*------contact 연락처 부분------*/
+#contact .contacBox>h3>img{margin:20px 5px 0 60px;}
+#contact .contacBox .tel{top:170px;left:3%;}
+#contact .contacBox .social{bottom:130px;left:3%;}
+#contact .contacBox .name{top:230px;right:3%;}
+#contact .contacBox .me{cursor:pointer;}
+
+/*------result 포폴링크 영역------*/
+#result .resultBox article{width:45%; margin:10px 0 20px 3%; float:left;}
+#result .resultBox article>h3{width:96%;padding-left:4%;}
+#result .resultBox article>p{width:96%; padding:2%;}
+/*웹에서만 클래스 추가 (모바일, 태블릿 호버 불가)*/
+.showText{overflow:hidden;white-space:nowrap; text-overflow:ellipsis; white-space: nowrap; }
+
+/*------footer-----*/
+footer{max-width:1050px;}
+
+}

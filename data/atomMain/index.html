@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" type="text/css" href="./css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+	<script src="./js/jquery-1.12.3.js"></script>
+	<script src="./js/t.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
+
+  <title>HN's Portfolio</title>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <p>Portfolio Site</p>
+      <!--웹에서 사용하는 fix메뉴(아이콘 없음)-->
+      <ul class="fixmenuWeb">
+        <li class="menuCheck"><a href="#">Certificate</a></li>
+        <li><a href="#">Record</a></li>
+        <li><a href="#">ContactInformation</a></li>
+        <li><a href="#">Results</a></li>
+      </ul>
+      <!--모바일,탭에서 사용하는 fix메뉴(아이콘 있음)-->
+      <ul class="fixmenuTab">
+        <li class="menuCheck"><a href="#"><img src="./img/page.png" alt="페이지모양아이콘">
+          Certificate</a></li>
+        <li><a href="#"><img src="./img/page.png" alt="페이지모양아이콘">
+          Record</a></li>
+        <li class="minBox"><a href="#"><img src="./img/page.png" alt="페이지모양아이콘">
+          ContactInformation</a></li>
+        <li><a href="#"><img src="./img/page.png" alt="페이지모양아이콘">
+          Results</a></li>
+      </ul>
+
+      <ul class="fixmenuMobile">
+        <li><img src="./img/page.png" alt="페이지모양아이콘">
+          Certificate</li>
+        <li><img src="./img/page.png" alt="페이지모양아이콘">
+          Record</li>
+        <li class="minBox"><img src="./img/page.png" alt="페이지모양아이콘">
+          ContactInformation</li>
+        <li><img src="./img/page.png" alt="페이지모양아이콘">
+          Results</li>
+      </ul>
+
+      <!--모바일에서 사용할 토글-->
+      <span>
+      <img class="toggleImg" src="./img/toggle.png" alt="상단슬라이드메뉴 토글버튼" />
+      </span>
+    </header>
+
+    <nav>
+      <ul class="subMenuWeb">
+        <li><img src="./img/rr.png" alt="폴더모양옆 방향 아이콘">
+          <img src="./img/folder.png" alt="폴더모양아이콘">
+            Welcome_</li>
+        <li><img src="./img/bb.png" alt="폴더모양옆 방향 아이콘">
+          <img src="./img/folder.png" alt="폴더모양아이콘">
+            This site</li>
+        <li><img src="./img/bb.png" alt="폴더모양옆 방향 아이콘">
+          <img src="./img/folder.png" alt="폴더모양아이콘">
+            consists of</li>
+      </ul>
+      <!--모바일에서사용-->
+      <ul class="subMenuMobile">
+        <li><img src="./img/rr.png" alt="폴더모양옆 방향 아이콘">
+          <img src="./img/folder.png" alt="폴더모양아이콘">
+            Welcome_This site</li>
+        <li><img src="./img/bb.png" alt="폴더모양옆 방향 아이콘">
+          <img src="./img/folder.png" alt="폴더모양아이콘">
+            consists of</li>
+      </ul>
+      <!--공용-->
+      <ul class="subMenu">
+        <li><a href="#" class="check"><img src="./img/page.png" alt="페이지모양아이콘">
+          Certificate
+        </a></li>
+        <li><a href="#"><img src="./img/page.png" alt="페이지모양아이콘">
+          Record
+        </a></li>
+        <li><a href="#"><img src="./img/page.png" alt="페이지모양아이콘">
+          ContactInformation
+        </a></li>
+        <li><a href="#"><img src="./img/page.png" alt="페이지모양아이콘">
+          Results
+        </a></li>
+      </ul>
+    </nav>
+
+    <div class="bgNum">
+      <!--배경에 들어갈 숫자 영역-->
+    </div>
+
+    <div id="container">
+      <div id="time">
+        <p class="timeTp">
+          <kbd>&#60;</kbd><kbd class="point1">welcome</kbd><kbd>&#62;</kbd>
+            HELLOOOW!!<del><s>#db6d6d,#fff</s>!!!!!!!</del><ins>1</ins>
+            <img src="./img/time_sun.png" alt="돌아가는 해모양 아이콘" class="sun">
+            Today is
+          <kbd>&#60;/</kbd><ins class="point1">welcome</ins><ins>&#62;</ins>
+        </p>
+        <!--삽입)가능하다면 timeTp이후에 날짜 시:분 에서 :< 깜빡이게 -->
+      </div><!--div #time-->
+
+      <div id="certificate">
+        <div>
+          <p class="certificateTp">
+            <kbd>&#60;</kbd><kbd class="point2">certificate</kbd>&#62;
+            posible to, &#60;/<ins class="point2">certificate</ins><ins>&#62;</ins>
+          </p>
+          <img src="./img/certificate_t.png" alt="사용가능 기증과 자격증 타이틀이미지" class="certificateTt"/>
+        </div>
+        <div class="certificateBox">
+          <span></span>
+          <section>
+            <h3>사용가능툴, 기능</h3>
+            <article>
+              <img src="./img/certificate_photo.png" alt="포토샵아이콘">
+              <h3>Photoshop</h3>
+              <p class="level">
+                <span class="point3">★★★</span>
+              </p>
+            </article>
+            <article>
+              <img src="./img/certificate_illust.png" alt="일러스트아이콘">
+              <h3>Illustrator</h3>
+              <p class="level">
+                <span class="point3">★★☆</span>
+              </p>
+            </article>
+            <article>
+              <img src="./img/certificate_html.png" alt="html아이콘">
+              <h3>HTML5</h3>
+              <p class="level">
+                <span class="point3">★★★</span>
+              </p>
+            </article>
+            <article>
+              <img src="./img/certificate_css.png" alt="css아이콘">
+              <h3>CSS3</h3>
+              <p class="level">
+                <span class="point3">★★☆</span>
+              </p>
+            </article>
+            <article>
+              <img src="./img/certificate_js.png" alt="js아이콘">
+              <h3>jQuery</h3>
+              <p class="level">
+                <span class="point3">★☆</span>
+              </p>
+            </article>
+          </section><!--사용가능툴 섹션-->
+
+          <section>
+            <h3>자격증</h3>
+            <div>
+              <img src="./img/certificate.png" alt="자격증아이콘">
+              <article>
+                <h3>그래픽스운용기능사</h3>
+                11.04
+              </article>
+            </div>
+            <div>
+              <img src="./img/certificateCard.png" alt="자격증카드아이콘">
+              <article>
+                <h3>GTQ1,2급</h3>
+                11.06
+              </article>
+            </div>
+            <div>
+              <img src="./img/certificate.png" alt="자격증아이콘">
+              <article>
+                <h3>웹디자인기능사</h3>
+                17.09
+              </article>
+            </div>
+          </section><!--자격증 섹션-->
+        </div><!--div .certificateBox-->
+      </div><!--div #certificate-->
+
+      <div id="record">
+        <div>
+          <p class="recordTp">
+            &#60;<kbd class="point4">certificate</kbd>&#62; 2011~2017
+            &#60;/<del><s>#21b1b1,#fff</s>ㅊㄷㄱ샤</del><ins class="point4">certificate</ins><ins>&#62;</ins>
+          </p>
+          <img src="./img/record_t.png" alt="record간단이력 타이틀이미지" class="recordTt"/>
+        </div>
+        <div class="slide">
+          <span></span>
+          <img src="./img/slide01.png" alt="11-12년이력 이미지">
+          <img src="./img/slide02.png" alt="12-13년이력 이미지">
+          <img src="./img/slide03.png" alt="14-15년이력 이미지">
+          <img src="./img/slide04.png" alt="15-17년이력 이미지">
+          <img src="./img/slide05.png" alt="17년이력 이미지">
+          <div class="slideDirect">
+            <a href="javascript:;" class="left"><img src="./img/left.png" alt="슬라이드 왼쪽으로"></a>
+            <a href="javascript:;" class="right"><img src="./img/right.png" alt="슬라이드 오른쪽으로"></a>
+          </div>
+          <div class="slideYear">
+              <a href="#" class="yearCheck">11-12</a><img src="./img/slideBar.png" alt="띄고">
+              <a href="#">12-13</a><img src="./img/slideBar.png" alt="띄고">
+              <a href="#">14-15</a><img src="./img/slideBar.png" alt="띄고">
+              <a href="#">15-17</a><img src="./img/slideBar.png" alt="띄고">
+              <a href="#">17</a>
+          </div>
+        </div>
+      </div><!--div #record-->
+
+      <div id="contact">
+        <p class="contactTp">
+          &#60;<kbd class="point5">contactInformation</kbd>&#62;
+          YOO HAN NA &#60;/<ins class="point5">contactInformation</ins>&#62;
+        </p>
+        <div class="contacBox">
+          <h3><img src="./img/siteMaker.png" alt="사이트메이커 아이콘">
+          Site maker</h3>
+          <div class="tel">
+            <h3>TEL <img src="./img/phone.png" alt="전화기모양 아이콘"></h3>
+            <p>010-7194-7662</p>
+            <h3>E-MAIL <img src="./img/mail.png" alt="메일모양 아이콘"></h3>
+            <p>ichme13@naver.com</p>
+          </div>
+          <div class="social">
+            <p><img src="./img/tw.png" alt="트위터 아이콘">@ichme13</p>
+            <p><img src="./img/face.png" alt="트위터 아이콘">-</p>
+            <p><img src="./img/blog.png" alt="트위터 아이콘">blog.ichme13</p>
+          </div>
+          <div class="name">
+            <p>1991.01</p>
+            <p>유한나<br/>
+            <span>YOO HAN NA</span></p>
+          </div>
+          <img src="./img/hanna.png" alt="초상화 이미지" class="me">
+        </div>
+      </div><!--div #contact-->
+
+      <div id="result">
+        <div>
+          <p class="resultTp">
+            &#60;<kbd class="point6">result</kbd>&#62;
+             2017.09.03 ~ <ins>1</ins>2017.11.22 &#60;/<ins class="point6">result</ins>&#62;
+          </p>
+          <img src="./img/result_t.png" alt="사이트 링크 타이틀 이미지" class="resultTt"/>
+        </div>
+        <div class="resultBox">
+          <h3><img src="./img/result_notice.png" alt="포트폴리오 제작기간 아이콘">
+            2017.09.03 ~ 2017.11.22
+          </h3>
+          <article>
+            <p>
+              개인 홈페이지형으로 간단한 프로필과 포토갤러리를 포함합니다.<br/>
+              HTML과 CSS 그리고 간단한 JS로 제작하였으며,<br/>
+              가벼운 포토갤러리형 홈페이지입니다.</br/>
+            </p>
+            <h3>ASURA Jewelry Homepage</h3>
+            <a href="../asura/index.html" target="_blank">
+              <img src="./img/asuraSite.jpg" alt="아수라 사이트 링크이미지">
+            </a>
+          </article>
+          <article>
+            <p>
+              자연친화적 화장품 사이트로 웹에서의 레이아웃을 카피하여 만든사이트입니다  <br/>
+              HTML과 CSS JS로 사용, 실제의 코드와는 다를 수 있습니다.
+            </p>
+            <h3>Maiil - Web Copy Site</h3>
+            <a href="http://omnivor2m.dothome.co.kr/copy_maiim/" target="_blank">
+              <img src="./img/maiim.jpg"  alt="마임 카피사이트 링크이미지">
+            </a>
+          </article>
+
+
+
+
+
+        </div><!--div .resultBox-->
+        <p class="end">...</p>
+      </div><!--div #result-->
+    </div><!--div #container-->
+
+    <footer>
+      <p>
+        <img src="./img/footer_notice.png" alt="원형알림표시이미지">
+        This site was made with reference to the Atom editor
+      </p>
+      <p>
+        <span> </span>
+        <img src="./img/footer_notice2.png" alt="삼각형알림표시이미지">
+        &copy; 2017 HANNA.
+      </p>
+    </footer>
+
+
+
+  </div><!--div #wrap-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
