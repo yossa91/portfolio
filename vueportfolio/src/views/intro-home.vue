@@ -2,14 +2,14 @@
     <main>
         <div id="introWrap">
             <div class="introMain">
-                <a href="/" class="introIcoHome"></a>
+                <a class="introIcoHome"></a>
                 <a class="introIcoSidemenu"></a>
-                <a href="/" class="introIcoMaker"><span>YOOHANNA</span> / portfolio</a>
+                <a class="introIcoMaker"><span>YOOHANNA</span> / portfolio</a>
                 <div class="introSideMenu">
                     <div><a class="ism_btn"></a></div>
                     <ul>
-                        <li><a href="">intro</a></li>
-                        <li><a href="">maker</a></li>
+                        <li><a class="menuCheck">intro</a></li>
+                        <li><a href="/about">maker</a></li>
                         <li class="sideMenuResult">results</li>
                             <ul>
                                 <li><a href="">cloneSite</a></li>
@@ -17,6 +17,16 @@
                                 <li><a href="">otherDesign</a></li>
                             </ul>                        
                     </ul>
+                </div>
+                <div class="introMaker">
+                    <div class="introMakereTitle">
+                        <h2>CONTACT</h2>
+                        <a class="im_btn"></a>
+                    </div>
+                    <div class="introMakereInfo">
+                        <p>NUMBER | 010.7194.7662</p>
+                        <p>MAIL  | finite_me@naver.com</p>
+                    </div>
                 </div>
                 <article class="inroTextWrap">
                     <div class="inroTextBox">
@@ -46,14 +56,37 @@
 
 
 <script>
-    var sideBtn = document.querySelector('.introIcoSidemenu');
-    sideBtn.addEventListener('click',() =>{
-       console.log('test');
-    });
+
+    export default{
+        name : 'intro-home',
+        mounted() {
+                var sideBtn = document.querySelector('.introIcoSidemenu');
+                var sideMenu = document.querySelector('.introSideMenu');
+                var sideClose = document.querySelector('.ism_btn');
+                sideBtn.addEventListener('click',() => {
+                    sideMenu.style.width = '300px';
+                });
+                sideClose.addEventListener('click', () => {
+                    sideMenu.style.width = '0px';
+                });
+
+                var maker = document.querySelector('.introMaker');
+                var makerBtn = document.querySelector('.introIcoMaker');
+                var makerClose = document.querySelector('.im_btn');
+                makerBtn.addEventListener('click', () => {
+                    maker.style.opacity = '1';
+                });
+                makerClose.addEventListener('click', () => {
+                    maker.style.opacity = '0';
+                });
+
+        },
+    }
+
 
 </script>
 
-<style>
+<style scoped>
     main{
         width: 100%;
         height: 100vh;
@@ -133,6 +166,7 @@
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
         opacity: 0;
+        cursor: pointer;
     }
     .introIcoMaker>span{
         font-weight: bold;
@@ -150,6 +184,10 @@
     100%   {opacity: 1;}  
     }
     /*사이드메뉴*/
+    .menuCheck{
+        opacity: 0.6;
+        text-decoration: underline;
+    }
     .introSideMenu{
         position: absolute;
         z-index: 50;
@@ -198,10 +236,60 @@
         padding:7px 30px 7px 30px;
         background: url('../assets/img/intro/main_menu_side.png')center left no-repeat;
         background-size: 12px auto;
-        transition: 0.2s;
     }
     .introSideMenu>ul a:hover{
         opacity: 0.6;
+    }
+    /*하단 제작자 인포*/
+    .introMaker{
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        bottom: 100px;
+        padding: 0 30px;
+        background-color: #2C50FA;
+        color: #fff;
+        z-index: 50;
+        transition: 0.8s;
+    }
+    .introMakereTitle{
+        display: flex;
+        width:300px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #fff;
+    }
+    .introMakereTitle>h2{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 45px;
+    }
+    .introMakereTitle>.im_btn{
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: url('../assets/img/intro/main_close.png')center no-repeat;
+        background-size: 12px auto;
+        cursor: pointer;
+    }
+    .introMakereInfo{
+        position: relative;
+        padding: 25px 0 25px 20px;
+    }
+    .introMakereInfo::after{
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        transform: rotate(45deg);
+        bottom: -5px;
+        left: calc(50% - 5px);
+        z-index: 50;
+        background-color: #2C50FA;        
+    }
+    .introMakereInfo>p:nth-child(1){
+        margin-bottom: 10px;
     }
     /*중앙글씨*/
     .inroTextWrap{
@@ -214,8 +302,8 @@
         position:relative;
         border: 1px dashed #333;
         animation-name: textBox;
-        animation-delay: 2.5s;
-        animation-duration: 0.8s;
+        animation-delay: 2.3s;
+        animation-duration: 0.6s;
         animation-timing-function:ease-in-out;
         animation-fill-mode: forwards;  
     }
@@ -283,16 +371,16 @@
         animation-fill-mode: forwards; 
     }
     .texts>p:nth-of-type(1){
-        animation-delay: 4s;
+        animation-delay: 3.5s;
     }
     .texts>p:nth-of-type(2){
-        animation-delay: 4.2s;
+        animation-delay: 3.7s;
     }
     .texts>p:nth-of-type(3){
-        animation-delay: 4.4s;
+        animation-delay: 3.9s;
     }
     .texts>p:nth-of-type(4){
-        animation-delay: 4.6s;
+        animation-delay: 4s;
     }
     @keyframes textUp {
     0%   {padding-top: 85px;}
@@ -309,11 +397,12 @@
         padding: 10px 20px;
         border-radius: 40px;
         animation-name: iconShow;
-        animation-delay: 5.5s;
+        animation-delay: 5s;
         animation-duration: 0.2s;
         animation-fill-mode: forwards; 
         opacity: 0;
     }
+    /*메인펜선*/
     .introLine{
         position: absolute;
         width: 1180px;
@@ -325,23 +414,44 @@
         stroke-dasharray: 2600;
         stroke-dashoffset: 2600;
         animation-name: lineUp;
-        animation-delay: 4.5s;
+        animation-delay: 4s;
         animation-duration: 2.5s;
         animation-fill-mode: forwards;
+        animation-timing-function:ease-in-out;
     }
     @keyframes lineUp{
     0% {stroke-dashoffset: 2600;}
     100% {stroke-dashoffset: 0;}
     }
-
-
+    /*----------------------------------------------------------------------------------------------- */
     @media screen and (max-width: 1300px){   
-    #introHome{
+    #introWrap{
         padding: calc(50vh - 400px) 50px 0 50px;
     }
     .introMain{
         width: 100%;
     }
+
+
+    
+    }
+    /*----------------------------------------------------------------------------------------------- */
+    @media screen and (max-width: 950px){   
+    #introWrap{
+        padding: calc(50vh - 400px) 15px 0 15px;
+    }
+
+
+    
+    }
+    /*----------------------------------------------------------------------------------------------- */
+    @media screen and (max-width: 420px){   
+    #introWrap{
+        padding: calc(50vh - 400px) 10px 0 10px;
+    }
+
+
+    
     }
 
 </style>
