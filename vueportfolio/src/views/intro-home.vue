@@ -39,17 +39,20 @@
                             <p>PLANS</p>
                             <p>TO</p>
                             <p>LIFE.</p>
-                            <a href="/" class="lookAround">look around</a>
+                            <a href="/about" class="lookAround">look around</a>
                         </div>
                         <div class="introLine">
-                            <svg id="line" viewBox="0 0 1208.5 835.4" style="enable-background:new 0 0 1208.5 835.4;" xml:space="preserve">
-                            <path class="i_line_01" d="M5.7,824.3c0,0,237-121,302-260s76-217,74-274s-123,88-140,179s96.7,146.5,226,78c134-71,128-232,110-290
-                                s-38-22-25,17s36.6,117,257.3,71s321.7-225,387.7-339"/></svg>
+                            <svg id="line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1546.847 1044.678">
+                            <path class="i_line_01" fill="none" stroke="#3256A6" stroke-width="25" stroke-miterlimit="10" d="M3.028,1032.55c0,0,332.621-83.057,527.974-296.985
+                                c174.617-191.222,196.032-340.24,199.49-389.98c3.794-54.575-9-59.997-40.498-23.999s-155.991,175.492-71.996,247.488
+                                s220.954,17.935,280.485-88.496c51.438-91.961,43.498-157.492,23.999-209.989s-32.362-12.409-18.863,43.088
+                                s143.358,84.406,261.853,43.908S1494.098,239.09,1534.524,2.102"/>
+                            </svg>
                         </div>
-                    </div>
-                </article>
-            </div>
-        </div>
+                    </div><!--inroTextBox-->
+                </article><!--inroTextWrap-->
+            </div><!--introMain-->
+        </div><!--introWrap-->
     </main>
 </template>
 
@@ -75,9 +78,11 @@
                 var makerClose = document.querySelector('.im_btn');
                 makerBtn.addEventListener('click', () => {
                     maker.style.opacity = '1';
+                    maker.style.zIndex = '99';
                 });
                 makerClose.addEventListener('click', () => {
                     maker.style.opacity = '0';
+                    maker.style.zIndex = '-99';
                 });
 
         },
@@ -167,6 +172,7 @@
         animation-fill-mode: forwards;
         opacity: 0;
         cursor: pointer;
+        z-index: 99;
     }
     .introIcoMaker>span{
         font-weight: bold;
@@ -249,7 +255,6 @@
         padding: 0 30px;
         background-color: #2C50FA;
         color: #fff;
-        z-index: 50;
         transition: 0.8s;
     }
     .introMakereTitle{
@@ -356,7 +361,7 @@
     100%   {opacity: 1;}  
     }
     .texts{
-        padding:50px 0 0 110px
+        padding:50px 0 0 110px;
     }
     .texts>p{
         display: block;
@@ -389,6 +394,7 @@
     }
     .lookAround{
         display:inline-block;
+        position: static;
         margin-top:25px;
         font-size: 18px;
         font-weight: bold;
@@ -401,55 +407,150 @@
         animation-duration: 0.2s;
         animation-fill-mode: forwards; 
         opacity: 0;
+        z-index: 50;
     }
     /*메인펜선*/
     .introLine{
         position: absolute;
-        width: 1180px;
-        right:-520px;
-        bottom:-300px;
+        z-index: -1;
+        right:-500px;
+        bottom:-500px;
+    }
+    .introLine>svg{
+        width: 1546px;
     }
 	.i_line_01{
         fill:none;stroke:#2C50FA;stroke-width:25;stroke-miterlimit:10;
-        stroke-dasharray: 2600;
-        stroke-dashoffset: 2600;
+        stroke-dasharray: 3000;
+        stroke-dashoffset: 3000;
         animation-name: lineUp;
         animation-delay: 4s;
-        animation-duration: 2.5s;
+        animation-duration: 2.1s;
         animation-fill-mode: forwards;
         animation-timing-function:ease-in-out;
     }
     @keyframes lineUp{
-    0% {stroke-dashoffset: 2600;}
+    0% {stroke-dashoffset: 3000;}
     100% {stroke-dashoffset: 0;}
     }
     /*----------------------------------------------------------------------------------------------- */
     @media screen and (max-width: 1300px){   
-    #introWrap{
-        padding: calc(50vh - 400px) 50px 0 50px;
+        #introWrap{
+            padding: calc(50vh - 400px) 50px 0 50px;
+        }
+        .introMain{
+            width: 100%;
+        }
+        /*중앙글씨*/
+        .inroTextWrap{
+            padding-top:140px;
+            padding-left:12%;
+        }
+        .inroTextBox{
+            width: 0%; 
+        }
+        @keyframes textBox {
+        0%   {width: 0px; height: 0px;}
+        100%   {width: 86%; height: 500px;}  
+        }
+        .texts{
+            padding:50px 0 0 110px
+        }
+        /*메인펜선*/
+        .introLine{
+            z-index: -1;
+        }
     }
-    .introMain{
-        width: 100%;
-    }
-
-
-    
-    }
-    /*----------------------------------------------------------------------------------------------- */
+    /*---------------------------------------------------태블릿-------------------------------------------- */
     @media screen and (max-width: 950px){   
-    #introWrap{
-        padding: calc(50vh - 400px) 15px 0 15px;
-    }
-
-
+        #introWrap{
+            padding: calc(50vh - 400px) 15px 0 15px;
+        }
+        /*중앙글씨*/
+        .texts{
+            padding:50px 0 0 70px
+        }
+        /*메인펜선*/
+        .introLine{
+            right:-450px;
+            bottom:-450px;
+        }
+        .introLine>svg{
+            width: 1300px;
+        }
+        .i_line_01{
+            fill:none;stroke:#2C50FA;stroke-width:25;stroke-miterlimit:10;
+            stroke-dasharray: 3000;
+            stroke-dashoffset: 3000;
+            animation-name: lineUp;
+            animation-delay: 4s;
+            animation-duration: 2.1s;
+            animation-fill-mode: forwards;
+            animation-timing-function:ease-in-out;
+        }
+        @keyframes lineUp{
+        0% {stroke-dashoffset: 3000;}
+        100% {stroke-dashoffset: 0;}
+        }
     
     }
-    /*----------------------------------------------------------------------------------------------- */
-    @media screen and (max-width: 420px){   
-    #introWrap{
-        padding: calc(50vh - 400px) 10px 0 10px;
-    }
-
+    /*---------------------------------------------------모바일-------------------------------------------- */
+    @media screen and (max-width: 650px){   
+        #introWrap{
+            padding: 0 10px 0 10px ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .introMain{
+            height: 80vh;
+        }
+        @keyframes mainSlideDown {
+        0%   {height: 0; opacity: 0;}
+        100%   {height: 80vh; opacity: 1;}  
+        }
+        /*하단 제작자 인포*/
+        .introMakereTitle{
+            width:240px;
+        }
+        .introMakereInfo{
+            padding: 25px 0 25px 10px;
+        }
+        /*중앙글씨*/
+        .inroTextWrap{
+            padding-top:110px;
+            padding-left:8%;
+            padding-right:8%;
+        }
+        .inroTextBox{
+            width: 0px; 
+            height: 0px;
+        }
+        @keyframes textBox {
+        0%   {width: 0px; height: 0px;}
+        100%   {width: 100%; height: calc(80vh - 220px);}  
+        }
+        .texts{
+            padding:25px 0 70px 10px
+        }
+        .texts>p{
+            height: 50px;
+            font-size: 45px;
+            padding-top: 50px;
+        }
+        .lookAround{
+            margin-top:20px;
+            font-size: 15px;
+            padding: 8px 15px;
+        }
+        /*메인펜선*/
+        .introLine{
+            right:-320px;
+            bottom:-260px;
+        }
+        .introLine>svg{
+            width: 800px;
+        }
 
     
     }
