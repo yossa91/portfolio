@@ -2,6 +2,7 @@
     <main>
         <div id="introWrap">
             <div class="introMain">
+                <span class="introMainClose"></span>
                 <a class="introIcoHome"></a>
                 <a class="introIcoSidemenu"></a>
                 <a class="introIcoMaker"><span>YOOHANNA</span> / portfolio</a>
@@ -9,12 +10,13 @@
                     <div><a class="ism_btn"></a></div>
                     <ul>
                         <li><a class="menuCheck">intro</a></li>
-                        <li><a href="/about">maker</a></li>
+                        <li><a class="makerPage">maker</a></li>
                         <li class="sideMenuResult">results</li>
                             <ul>
-                                <li><a href="">cloneSite</a></li>
-                                <li><a href="">renewalSite</a></li>
-                                <li><a href="">otherDesign</a></li>
+                                <li><a class="renewalPage">renewalSite</a></li>
+                                <li><a class="clonePage">cloneSite</a></li>
+                                <li><a class="designPage">otherDesign</a></li>
+                                <li><a class="contactPage">contact</a></li>
                             </ul>                        
                     </ul>
                 </div>
@@ -37,9 +39,9 @@
                         <div class="texts">
                             <p>BRING</p>
                             <p>PLANS</p>
-                            <p>TO</p>
+                            <p class="fonnt-blue">TO</p>
                             <p>LIFE.</p>
-                            <a href="/about" class="lookAround">look around</a>
+                            <a class="lookAround">look around</a>
                         </div>
                         <div class="introLine">
                             <svg id="line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1546.847 1044.678">
@@ -63,6 +65,7 @@
     export default{
         name : 'intro-home',
         mounted() {
+                //사이드메뉴 열기,닫기
                 var sideBtn = document.querySelector('.introIcoSidemenu');
                 var sideMenu = document.querySelector('.introSideMenu');
                 var sideClose = document.querySelector('.ism_btn');
@@ -72,18 +75,52 @@
                 sideClose.addEventListener('click', () => {
                     sideMenu.style.width = '0px';
                 });
-
+                //하단부 제작자 열기,닫기
                 var maker = document.querySelector('.introMaker');
                 var makerBtn = document.querySelector('.introIcoMaker');
                 var makerClose = document.querySelector('.im_btn');
                 makerBtn.addEventListener('click', () => {
                     maker.style.opacity = '1';
-                    maker.style.zIndex = '99';
+                    maker.style.zIndex = '90';
                 });
                 makerClose.addEventListener('click', () => {
                     maker.style.opacity = '0';
                     maker.style.zIndex = '-99';
                 });
+                //페이지 연결
+                var lineAnime = document.querySelector('.i_line_01');
+                function moveList(page) {
+                    lineAnime.className.baseVal = 'i_line_02';                    
+                    setTimeout(() => {
+                        document.querySelector('.introMainClose').style.opacity = 1;
+                        document.querySelector('.introMainClose').style.zIndex = 99;
+                            setTimeout(() => {
+                                location.replace('/' + page);
+                            }, 200);
+                    }, 1000);
+                }
+
+                document.querySelector('.lookAround').addEventListener('click', () => {
+                    moveList('about');
+                });
+                document.querySelector('.makerPage').addEventListener('click', () => {
+                    moveList('about');
+                });
+                document.querySelector('.renewalPage').addEventListener('click', () => {
+                    moveList('renewal');
+                });
+                document.querySelector('.clonePage').addEventListener('click', () => {
+                    moveList('clone');
+                });
+                document.querySelector('.designPage').addEventListener('click', () => {
+                    moveList('design');
+                });
+                document.querySelector('.contactPage').addEventListener('click', () => {
+                    moveList('contact');
+                }); 
+
+
+
 
         },
     }
@@ -96,7 +133,7 @@
         width: 100%;
         height: 100vh;
         background-color: #E5BE07;
-    }
+    } 
     #introWrap{
         width: 100%;
         height: 100vh;
@@ -119,6 +156,19 @@
     @keyframes mainSlideDown {
     0%   {height: 0; opacity: 0;}
     100%   {height: 800px; opacity: 1;}  
+    }
+    .introMain .introMainClose{
+        content: '';
+        position: absolute;
+        display: block;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -99;
+        background-color: #FBF9EE;
+        opacity: 0;
+        transition: 0.2s;
     }
     /*아이콘들 픽스*/
     .introIcoHome , .introIcoSidemenu{
@@ -172,7 +222,7 @@
         animation-fill-mode: forwards;
         opacity: 0;
         cursor: pointer;
-        z-index: 99;
+        z-index: 90;
     }
     .introIcoMaker>span{
         font-weight: bold;
@@ -227,6 +277,9 @@
     }
     .introSideMenu>ul ul{
         padding:10px 0 0 20px;
+    }
+    .introSideMenu>ul a{
+        cursor: pointer;
     }
     .introSideMenu .sideMenuResult{
         font-size: 15px;
@@ -387,6 +440,9 @@
     .texts>p:nth-of-type(4){
         animation-delay: 4s;
     }
+    .fonnt-blue{
+        color:#E5BE07;
+    }
     @keyframes textUp {
     0%   {padding-top: 85px;}
     95%   {padding-top: 0px;}
@@ -408,6 +464,7 @@
         animation-fill-mode: forwards; 
         opacity: 0;
         z-index: 50;
+        cursor: pointer;
     }
     /*메인펜선*/
     .introLine{
@@ -420,7 +477,10 @@
         width: 1546px;
     }
 	.i_line_01{
-        fill:none;stroke:#2C50FA;stroke-width:25;stroke-miterlimit:10;
+        fill:none;
+        stroke:#2C50FA;
+        stroke-width:25;
+        stroke-miterlimit:10;
         stroke-dasharray: 3000;
         stroke-dashoffset: 3000;
         animation-name: lineUp;
@@ -432,6 +492,22 @@
     @keyframes lineUp{
     0% {stroke-dashoffset: 3000;}
     100% {stroke-dashoffset: 0;}
+    }
+    .i_line_02{
+        fill:none;
+        stroke:#2C50FA;
+        stroke-width:25;
+        stroke-miterlimit:10;
+        stroke-dasharray: 3000;
+        stroke-dashoffset: 0;
+        animation-name: lineClose;
+        animation-duration: 1.3s;
+        animation-fill-mode: forwards;
+        animation-timing-function:ease-in-out;
+    }
+    @keyframes lineClose{
+    0% {stroke-dashoffset: 0;}
+    100% {stroke-dashoffset: 3000;}
     }
     /*----------------------------------------------------------------------------------------------- */
     @media screen and (max-width: 1300px){   
@@ -487,10 +563,6 @@
             animation-duration: 2.1s;
             animation-fill-mode: forwards;
             animation-timing-function:ease-in-out;
-        }
-        @keyframes lineUp{
-        0% {stroke-dashoffset: 3000;}
-        100% {stroke-dashoffset: 0;}
         }
     
     }
