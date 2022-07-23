@@ -37,31 +37,35 @@
                     </article>
                     <article class="aboutSkill">
                         <h2>Skills</h2>
-                        <h3>자격증</h3>
-                        <ul>
-                            <li>자격증명 자격증명 / 11.04</li>
-                            <li>자격증명 자격증명 / 11.04</li>
-                            <li>자격증명 자격증명 / 11.04</li>
-                        </ul>
-                        <h3>사용가능 기능/툴</h3>
-                        <ul>
-                            <li class="skill01"></li>
-                            <li>디자인 카피, 간단한 디자인 구현</li>
-                            <li>간단한 아이콘 제작 및 관리</li>
-                        </ul>
-                        <ul>
-                            <li class="skill02"></li>
-                            <li>HTML5 및 XHTML 페이지 하드코딩</li>
-                            <li>모바일 페이지 제작</li>
-                            <li>반응형 레이아웃</li>
-                            <li>브라우저 호환성 관리</li>
-                            <li>레이아웃 및 동작을 위한 스크립트 제작 관리</li>
-                        </ul>
-                        <ul>
-                            <li class="skill03"></li>
-                            <li>node 간단한 서버 구현</li>
-                            <li> mysql을 사용한 간단한 기술 구현</li>
-                        </ul>
+                        <div>
+                            <h3>자격증</h3>
+                            <ul>
+                                <li>자격증명 자격증명 / 11.04</li>
+                                <li>자격증명 자격증명 / 11.04</li>
+                                <li>자격증명 자격증명 / 11.04</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>사용가능 기능/툴</h3>
+                            <ul>
+                                <li class="skill01"></li>
+                                <li>디자인 카피, 간단한 디자인 구현</li>
+                                <li>간단한 아이콘 제작 및 관리</li>
+                            </ul>
+                            <ul>
+                                <li class="skill02"></li>
+                                <li>HTML5 및 XHTML 페이지 하드코딩</li>
+                                <li>모바일 페이지 제작</li>
+                                <li>반응형 레이아웃</li>
+                                <li>브라우저 호환성 관리</li>
+                                <li>레이아웃 및 동작을 위한 스크립트 제작 관리</li>
+                            </ul>
+                            <ul>
+                                <li class="skill03"></li>
+                                <li>node 간단한 서버 구현</li>
+                                <li> mysql을 사용한 간단한 기술 구현</li>
+                            </ul>
+                        </div>
                     </article>
                     <article class="aboutNext">
                         <a class="abNextBtn"></a>
@@ -360,7 +364,7 @@
     .aboutBox{
         display: flex;
         position: relative;
-        padding-top: 90px;
+        padding: 90px 0 0 0;
         font-weight: 300;
         color: #333;
         opacity: 0;
@@ -394,7 +398,6 @@
         width: 350px;
         height: 350px;
         border-radius: 50%;
-        position: relative;
         background: url('../assets/img/about/me.png')center no-repeat;
         box-shadow: 50px 0px 0px 0px #2C50FA;   
     }
@@ -447,18 +450,18 @@
         color: #E5BE07;
         padding-bottom: 20px;
     }
-    .aboutSkill>h3{
+    .aboutSkill>div>h3{
         font-size: 15px;
         font-weight: bold;
         padding-left: 30px;
         line-height: 30px;
     }
-    .aboutSkill>ul{
+    .aboutSkill>div>ul{
         padding: 0 0 20px 30px;
         line-height: 20px;
         font-size: 15px;
     }
-    .aboutSkill>ul>li{
+    .aboutSkill>div>ul>li{
         padding-left: 10px;
     }
     .skill01{
@@ -504,49 +507,94 @@
             width: 100%;
         }
          /*aboutMe */
-
-         /*가로값 수정만 해둠~~~~ 여기서부터 반응형 수정~~~~~~ */
         .aboutMe{
             width: calc(50% - 55px);
             box-sizing: border-box;
             padding: 55px 0;
-            border-right: 1px dashed #333;
         }
         .abMePhoto{
+            width: 100%;
             padding: 0 0 55px 50px;
+            position: relative;
+        }
+        .abMePhotoBox{
+            width: 70%;
+            height: auto;
+            padding-top: 70%;
+            background-size: cover; 
+            box-shadow: 40px 0px 0px 0px #2C50FA;   
+        }
+    
+
+        
+    }
+    /*---------------------------------------------------태블릿-------------------------------------------- */
+    @media screen and (max-width: 950px){   
+        main{
+            padding: calc(50vh - 400px) 15px calc(50vh - 400px) 15px;
+            height: 100%;
+        }
+        #introWrap{
+            height: 100%;
+            margin: auto;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .3);
+            position: relative;
+        }
+        /*SVG~~~*/
+        .about_line_top{
+            right: -220px;
+        }
+        .about_line_top>svg{
+            width: 784px;
+        }
+        .about_line_bot{
+            right: -380px;
+            top: -370px;
+        }
+        .about_line_bot>svg{
+            width: 1290px;
+        }
+        /*내용플렉스*/
+        .aboutBox{
+            display: block;
+            position: relative;
+            padding: 120px 55px 0 55px;
+            box-sizing: border-box;
+        }
+        /*aboutMe */
+        .aboutMe{
+            width: 100%;
+            padding:0;
+            border-right: none;
+            border-bottom: 1px dashed #333;
+        }
+        .abMePhoto{
+            padding: 0;
+            box-sizing: border-box;
             position: relative;
         }
         .abMePhotoBox{
             width: 350px;
             height: 350px;
-            border-radius: 50%;
-            position: relative;
-            background: url('../assets/img/about/me.png')center no-repeat;
-            box-shadow: 50px 0px 0px 0px #2C50FA;   
+            padding-top: 0;
+            margin: auto;
+            box-shadow: 50px 0px 0px 0px #2C50FA; 
         }
         .abMePhotoClip{
-            display: block;
             width: 84px;
             height: 124px;
             position: absolute;
-            top: 70px;
-            left: -25px;
-            opacity: 0;
-            background: url('../assets/img/about/aboutme.png');
-            z-index: 50;
-            animation-name:aboutClipShow;
-            animation-delay: 3.8s;
-            animation-duration: 0.3s;
-            animation-fill-mode: forwards;
-            animation-timing-function:ease-in-out;
+            top: 170px;
+            left: -80px;
         }
         @keyframes aboutClipShow{
-            0% {opacity: 0; left: -20px;}
+            0% {opacity: 0; left: -80px;}
             15% {opacity: 1;}
-            100% {opacity: 1; left: -7px;}
+            100% {opacity: 1; left: -62px;}
         }
         .abMeInfo{
-            padding: 0 70px;
+            text-align: center;
+            padding: 35px 0 40px 0;
         }
         .abMeInfo>h2{
             font-weight: bold;
@@ -558,58 +606,49 @@
             background-color: #E5BE07;
         }
         .abMeInfo>p{
+            margin: auto;
+            width: 400px;
             font-size: 15px;
             line-height: 22px;
         }
         /**/
         .aboutSkill{
-            width: calc(50% - 55px);
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
             box-sizing: border-box;
-            padding: 55px 0 0 50px;
+            padding: 30px 30px 0 30px;
         }
         .aboutSkill>h2{
-            font-weight: bold;
-            font-size: 24px;
-            color: #E5BE07;
-            padding-bottom: 20px;
+            width: 100%;
+            padding-bottom: 10px;
         }
-        .aboutSkill>h3{
-            font-size: 15px;
-            font-weight: bold;
-            padding-left: 30px;
-            line-height: 30px;
+        .aboutSkill>div>h3{
+            padding-left: 0;
         }
-        .aboutSkill>ul{
-            padding: 0 0 20px 30px;
-            line-height: 20px;
-            font-size: 15px;
+        .aboutSkill>div>ul{
+            padding: 0 0 15px 10px;
         }
-        .aboutSkill>ul>li{
-            padding-left: 10px;
+        .aboutSkill>div>ul>li{
+            padding-left: 0;
         }
-        .skill01{
-            height: 40px;
-            background: url('../assets/img/about/skill01.png')left center no-repeat;
-            background-size: auto 25px;
+        .aboutSkill>div:nth-of-type(1){
+            width: 45%;
+            box-sizing: border-box;
         }
-        .skill02{
-            height: 50px;
-            background: url('../assets/img/about/skill02.png')left center no-repeat;
-            background-size: auto 35px;
-        }
-        .skill03{
-            height: 50px;
-            background: url('../assets/img/about/skill03.png')left center no-repeat;
-            background-size: auto 35px;
+        .aboutSkill>div:nth-of-type(2){
+            width: 55%;
+            box-sizing: border-box;
         }
         /**/
         .aboutNext{
-            width: 110px;
-            display: flex;
-            align-items: center;
+            width: 100%;
+            display: block;
         }
         .abNextBtn{
             display: block;
+            margin: auto;
+            transform: rotate(90deg);
             width: 110px;
             height: 110px;
             background: url('../assets/img/about/about_next.png') center no-repeat;
@@ -618,22 +657,7 @@
         }
         .abNextBtn:hover{
             opacity: 0.6;
-        }   
-            
-
-
-        
-        
-    }
-    /*---------------------------------------------------태블릿-------------------------------------------- */
-    @media screen and (max-width: 950px){   
-        main{
-            padding: calc(50vh - 400px) 15px 0 15px;
         }
-        .introWrap{
-            height: ;
-        }
-        
     
     }
     /*---------------------------------------------------모바일-------------------------------------------- */
@@ -641,10 +665,7 @@
         main{
             padding: 10vh 10px 0 10px ;
         }
-        .introWrap{
-            height: 80vh;
-        }
-
+        /*모바일부터 수정~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 
     
