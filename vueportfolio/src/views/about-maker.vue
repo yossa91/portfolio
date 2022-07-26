@@ -119,6 +119,9 @@
                     }, 1000);
                 }
 
+                document.querySelector('.abNextBtn').addEventListener('click', () => {
+                    moveList('renewal');
+                });
                 document.querySelector('.introIcoHome').addEventListener('click', () => {
                     moveList('home');
                 });
@@ -148,7 +151,9 @@
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;300;400;500;700&display=swap');
     main{
+        font-family: 'IBM Plex Sans KR', sans-serif;
         width: 100%;
         height: 100vh; 
         background-color: #E5BE07;
@@ -184,8 +189,8 @@
         stroke-dasharray: 1350;
         stroke-dashoffset: 1350;
         animation-name:lineTop;
-        animation-delay: 2.8s;
-        animation-duration: 0.8s;
+        animation-delay: 2.4s;
+        animation-duration: 0.6s;
         animation-fill-mode: forwards;
         animation-timing-function:ease-in-out;
     }
@@ -219,8 +224,8 @@
         stroke-dasharray: 2000;
         stroke-dashoffset: 2000;
         animation-name:lineBot;
-        animation-delay: 2s;
-        animation-duration: 1s;
+        animation-delay: 1.8s;
+        animation-duration: 0.6s;
         animation-fill-mode: forwards;
         animation-timing-function:ease-in-out;
     }
@@ -234,7 +239,7 @@
         stroke-dashoffset: 0;
         animation-name:lineBotclose;
         animation-delay: 0.4s;
-        animation-duration: 0.7s;
+        animation-duration: 0.5s;
         animation-fill-mode: forwards;
         animation-timing-function:ease-in-out;
     }
@@ -266,6 +271,7 @@
         transition: 0.2s;
         opacity: 0;
         z-index: 50;
+        cursor: pointer;
     }
     .introIcoHome{  
         background-image: url('../assets/img/intro/main_home.png');
@@ -287,7 +293,6 @@
         animation-delay: 1s;
         animation-duration: 0.3s;
         animation-fill-mode: forwards;
-        cursor: pointer;
     }
     .introIcoSidemenu:hover{
         background-image: url('../assets/img/intro/main_menu_hv.png');
@@ -663,9 +668,53 @@
     /*---------------------------------------------------모바일-------------------------------------------- */
     @media screen and (max-width: 650px){   
         main{
-            padding: 10vh 10px 0 10px ;
+            padding: calc(50vh - 400px) 10px calc(50vh - 400px) 10px;
+            height: 100%;
         }
-        /*모바일부터 수정~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+        /*SVG~~~*/
+        .about_line_top{
+            right: -220px;
+        }
+        .about_line_top>svg{
+            width: 684px;
+        }
+        .about_line_bot{
+            right: -380px;
+            top: -370px;
+        }
+        .about_line_bot>svg{
+            width: 1190px;
+        }
+        /*aboutMe */
+        .abMePhotoBox{
+            width: 25vw;
+            height: 25vw;
+            padding-top: 0;
+            margin: auto;
+            box-shadow: none; 
+        }
+        .abMePhotoClip{
+            top: 30px;
+            left: -80px;
+        }
+        .abMeInfo{
+            padding: 35px 0 30px 0;
+        }
+        .abMeInfo>p{
+            width: 100%;
+        }
+        /**/
+        .aboutSkill{
+            padding: 30px 0px 0 0px;
+        }
+        .aboutSkill>div>ul{
+            padding: 0 0 10px 0px;
+        }
+        /**/
+        .aboutNext{
+            width: 100%;
+            display: block;
+        }
 
 
     

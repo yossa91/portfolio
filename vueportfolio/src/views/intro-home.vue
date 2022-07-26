@@ -96,7 +96,7 @@
                         document.querySelector('.introMainClose').style.zIndex = 99;
                             setTimeout(() => {
                                 location.replace('/' + page);
-                            }, 200);
+                            }, 100);
                     }, 1000);
                 }
 
@@ -129,7 +129,9 @@
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;300;400;500;700&display=swap');
     main{
+        font-family: 'IBM Plex Sans KR', sans-serif;
         width: 100%;
         height: 100vh;
         background-color: #E5BE07;
@@ -188,9 +190,6 @@
         animation-delay: 1s;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
-    }
-    .introIcoHome:hover{  
-        background-image: url('../assets/img/intro/main_home_hv.png');
     }
     .introIcoSidemenu{
         background-image: url('../assets/img/intro/main_menu.png');
@@ -470,7 +469,7 @@
     .introLine{
         position: absolute;
         z-index: -1;
-        right:-500px;
+        right:-550px;
         bottom:-500px;
     }
     .introLine>svg{
@@ -484,8 +483,8 @@
         stroke-dasharray: 3000;
         stroke-dashoffset: 3000;
         animation-name: lineUp;
-        animation-delay: 4s;
-        animation-duration: 2.1s;
+        animation-delay: 3.5s;
+        animation-duration: 1.8s;
         animation-fill-mode: forwards;
         animation-timing-function:ease-in-out;
     }
@@ -501,7 +500,7 @@
         stroke-dasharray: 3000;
         stroke-dashoffset: 0;
         animation-name: lineClose;
-        animation-duration: 1.3s;
+        animation-duration: 1s;
         animation-fill-mode: forwards;
         animation-timing-function:ease-in-out;
     }
