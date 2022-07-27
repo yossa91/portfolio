@@ -23,20 +23,22 @@
                     <article class="contentTitile">
                         <span>RESULTS</span>
                         <h3>CLONE SITE</h3>
-                        <p>웹 클로닝 사이트</p>
+                        <p>웹 클로닝 사이트 </p>
                     </article>
                     <article class="contentBox">
                         <section>
-                            <div class="ctBoxPhoto cbi01"></div>
+                            <div class="ctBoxPhoto cbp01"></div>
                                 <div class="ctBoxInfo">
-                                    <h4><span>01</span>싱그러운집 웹 클로닝 사이트 </h4>
+                                    <h4><span>01</span>싱그러운집 웹클로닝 사이트</h4>
                                     <p><span>Viewport</span>반응형</p>
-                                    <p><span>Part</span>All</p>
+                                    <p><span>Part</span>Main Page, Community Page</p>
                                     <p class="ctBoxInfoTxt">
-                                        싱그러운집은 ~~~ 내용
+                                        싱그러운집 웹클로닝 사이트입니다.
+                                        <br/>
+                                        Swiper 슬라이드 플러그인 사용과 CSS사용으로 반응형으로 제작 되었습니다.
                                     </p>
-                                    <button class="ctBoxDemoBtn">Demo</button>
-                                    <button class="ctBoxReposBtn">Repos</button>
+                                    <a class="ctBoxDemoBtn" href="http://ichme13.dothome.co.kr/portfolio/singHouse/" target="_blank">Demo</a>
+                                    <a class="ctBoxReposBtn" href="https://github.com/yossa91/data/tree/main/%EC%8B%B1%EA%B7%B8%EB%9F%AC%EC%9A%B4%EC%A7%91%EC%B9%B4%ED%94%BC" target="_blank">Repos</a>
                                 </div>
                                 <div class="ctBoxSkill">
                                     <table>
@@ -51,29 +53,31 @@
                                             <th>Skills</th>
                                         </tr>
                                         <tr>
-                                            <td class="tb_cate tb_c_ejs"><span>html</span></td>
-                                            <td>index.html / community.html</td>
-                                            <td>html</td>
+                                            <td class="tb_cate tb_c_ejs"><span>EJS</span></td>
+                                            <td>main.ejs / nowon_intro...ejs / nowon_iC_...ejs / nowon_login...ejs</td>
+                                            <td>html,ejs</td>
                                         </tr>
                                         <tr>
                                             <td class="tb_cate tb_c_css"><span>CSS</span></td>
-                                            <td>common.css / index.css / community.css</td>
+                                            <td>main.css / nowon_intro...css / nowon_iC_...css / nowon_login...css</td>
                                             <td>css</td>
                                         </tr>
                                     </table>
                                 </div>
                         </section>
                         <section>
-                            <div class="ctBoxPhoto cbi02"></div>
+                            <div class="ctBoxPhoto cbp02"></div>
                                 <div class="ctBoxInfo">
-                                    <h4><span>02</span>싱그러운집 웹 클로닝 사이트 </h4>
+                                    <h4><span>02</span>대전문화재단 웹클로닝 사이트</h4>
                                     <p><span>Viewport</span>반응형</p>
-                                    <p><span>Part</span>All</p>
+                                    <p><span>Part</span>Main Page, Artplace Page</p>
                                     <p class="ctBoxInfoTxt">
-                                        싱그러운집은 ~~~ 내용
+                                        대전문화재단 웹클로닝 사이트입니다.
+                                        <br/>
+                                        HTML과 CSS, Javascript 사용으로 반응형으로 제작 되었습니다.
                                     </p>
-                                    <button class="ctBoxDemoBtn">Demo</button>
-                                    <button class="ctBoxReposBtn">Repos</button>
+                                    <a class="ctBoxDemoBtn" href="http://ichme13.dothome.co.kr/portfolio/daejeon/" target="_blank">Demo</a>
+                                    <a class="ctBoxReposBtn" href="https://github.com/yossa91/data/tree/main/%EB%8C%80%EC%A0%84%EB%AC%B8%ED%99%94%EC%9E%AC%EB%8B%A8%EC%B9%B4%ED%94%BC" target="_blank">Repos</a>
                                 </div>
                                 <div class="ctBoxSkill">
                                     <table>
@@ -88,29 +92,31 @@
                                             <th>Skills</th>
                                         </tr>
                                         <tr>
-                                            <td class="tb_cate tb_c_ejs"><span>html</span></td>
-                                            <td>index.html / community.html</td>
-                                            <td>html</td>
+                                            <td class="tb_cate tb_c_ejs"><span>EJS</span></td>
+                                            <td>main.ejs / nowon_intro...ejs / nowon_iC_...ejs / nowon_login...ejs</td>
+                                            <td>html,ejs</td>
                                         </tr>
                                         <tr>
                                             <td class="tb_cate tb_c_css"><span>CSS</span></td>
-                                            <td>common.css / index.css / community.css</td>
+                                            <td>main.css / nowon_intro...css / nowon_iC_...css / nowon_login...css</td>
                                             <td>css</td>
                                         </tr>
                                     </table>
                                 </div>
                         </section>
                         <section>
-                            <div class="ctBoxPhoto cbi03"></div>
+                            <div class="ctBoxPhoto cbp03"></div>
                                 <div class="ctBoxInfo">
-                                    <h4><span>03</span>싱그러운집 웹 클로닝 사이트 </h4>
+                                    <h4><span>03</span>폴렉스존 웹클로닝 사이트</h4>
                                     <p><span>Viewport</span>반응형</p>
-                                    <p><span>Part</span>All</p>
+                                    <p><span>Part</span>Main Page, Sub Page</p>
                                     <p class="ctBoxInfoTxt">
-                                        싱그러운집은 ~~~ 내용
+                                        폴렉스존 웹클로닝 사이트입니다.
+                                        <br/>
+                                        HTML과 CSS, Javascript 사용으로 반응형으로 제작 되었습니다.
                                     </p>
-                                    <button class="ctBoxDemoBtn">Demo</button>
-                                    <button class="ctBoxReposBtn">Repos</button>
+                                    <a class="ctBoxDemoBtn" href="http://ichme13.dothome.co.kr/portfolio/pollex/" target="_blank">Demo</a>
+                                    <a class="ctBoxReposBtn" href="https://github.com/yossa91/data/tree/main/%ED%8F%B4%EB%A0%89%EC%8A%A4%EC%A1%B4" target="_blank">Repos</a>
                                 </div>
                                 <div class="ctBoxSkill">
                                     <table>
@@ -125,18 +131,19 @@
                                             <th>Skills</th>
                                         </tr>
                                         <tr>
-                                            <td class="tb_cate tb_c_ejs"><span>html</span></td>
-                                            <td>index.html / community.html</td>
-                                            <td>html</td>
+                                            <td class="tb_cate tb_c_ejs"><span>EJS</span></td>
+                                            <td>main.ejs / nowon_intro...ejs / nowon_iC_...ejs / nowon_login...ejs</td>
+                                            <td>html,ejs</td>
                                         </tr>
                                         <tr>
                                             <td class="tb_cate tb_c_css"><span>CSS</span></td>
-                                            <td>common.css / index.css / community.css</td>
+                                            <td>main.css / nowon_intro...css / nowon_iC_...css / nowon_login...css</td>
                                             <td>css</td>
                                         </tr>
                                     </table>
                                 </div>
                         </section>
+
 
                     </article>
                 </div><!--content-->
@@ -156,7 +163,6 @@
 
 
 <script>
-
     export default{
         name : 'about-maker',
         mounted() {
@@ -206,6 +212,8 @@
 
 
         },
+
+        
     }
 
 
@@ -306,7 +314,6 @@
         transition: 0.2s;
         opacity: 0;
         z-index: 50;
-        cursor: pointer;
     }
     .introIcoHome{  
         background-image: url('../assets/img/intro/main_home.png');
@@ -328,6 +335,7 @@
         animation-delay: 1s;
         animation-duration: 0.3s;
         animation-fill-mode: forwards;
+        cursor: pointer;
     }
     .introIcoSidemenu:hover{
         background-image: url('../assets/img/intro/main_menu_hv.png');
@@ -459,15 +467,15 @@
         width: 50%;
         height: 450px;
     }
-    .cbi01{
+    .cbp01{
         background: #fff url('../assets/img/clone/clone_mock_01.png')center no-repeat;
         background-size: contain;
     }
-    .cbi02{
+    .cbp02{
         background: #fff url('../assets/img/clone/clone_mock_02.png')center no-repeat;
         background-size: contain;
     }
-    .cbi03{
+    .cbp03{
         background: #fff url('../assets/img/clone/clone_mock_03.png')center no-repeat;
         background-size: contain;
     }
@@ -503,6 +511,8 @@
         padding: 35px 0;
     }
     .ctBoxDemoBtn,.ctBoxReposBtn{
+        display: inline-block;
+        text-align: center;
         width: 85px;
         line-height: 24px;
         background-color: #2C50FA;
@@ -557,7 +567,6 @@
     .tb_c_mysql>span{
         background-color: #F14848;
     }
-
     /*----------------------------------------------------------------------------------------------- */
     @media screen and (max-width: 1300px){   
         main{

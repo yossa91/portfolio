@@ -30,6 +30,7 @@ export const routes = [
         name : 'contact',
         component : () => import('../views/contact-page.vue')
     }
+
 ]
 
 

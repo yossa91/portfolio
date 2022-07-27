@@ -29,15 +29,31 @@
                         <section>
                             <div class="ctBoxPhoto cbp01"></div>
                                 <div class="ctBoxInfo">
-                                    <h4><span>01</span>노원문화원 웹 리뉴얼 사이트</h4>
-                                    <p><span>Type</span>SNS배너</p>
+                                    <h4><span>01</span>QUEENNYGEL PACKAGE / BOOTH / BANNER</h4>
+                                    <p><span>Type</span>시즌 패키지, 부스, 배너 디자인</p>
                                     <p><span>Tool</span>Adobe Photoshop</p>
                                     <p class="ctBoxInfoTxt">
-                                        전체적으로 정리되어 보이지 않는 배너들로 페이지의 첫페이지가 혼란스러워 보이며
-                                        아쉬운 반응형 부분과 단색의 이미지들의 아쉬운 부분을 개선하여
-                                        제작하려 노력하였습니다.<br/>
-                                        리뉴얼 사이트는 팀 프로젝트로 진행되었으며 메인페이지의 4section과 footer, Intro Category
-                                        내 페이지, 로그인 페이지와 회원가입 페이지 제작부분을 맡아 진행하였습니다.
+                                        QUEENNYGEL에서 발매한 가을 컬렉션의 패키지 디자인과 그 해 진행된
+                                        전시회의 부스디자인, 온라인 배너 디자인 입니다.<br/><br/>
+                                        가을의 모던한 컬러를 중심으로 '카라멜라이즈'라는 타이틀을 달고
+                                        제작된 제품의으로 대칭이 되는 컨셉을 목적으로 패키지를 제작하게 되었으며,
+                                        온라인의 배너 역시 제품의 부드러운 컬러감을 느낄 수 있도록 제작 하였습니다.                                       
+                                    </p>
+                                    <button class="ctBoxMockupBtn">Mockup</button>
+                                </div>
+                        </section>
+                         <section>
+                            <div class="ctBoxPhoto cbp02"></div>
+                                <div class="ctBoxInfo">
+                                    <h4><span>02</span>QUEENNYGEL BANNER / XBANNER</h4>
+                                    <p><span>Type</span>배너,엑스배너 디자인</p>
+                                    <p><span>Tool</span>Adobe Photoshop, Adobe Illustrator</p>
+                                    <p class="ctBoxInfoTxt">
+                                        QUEENNYGEL의 온라인 홍보를 위해 제작된 다양한 배너 디자인과
+                                        오프라인에서 사용된 엑스배너 디자인 입니다.<br/><br/>
+                                        SNS에서 홍보 이벤트를 목적으로 사용할 다양한 배너 제작물로
+                                        간단한 촬영과 합성으로 때에 따른 컨셉으로 제작한 배너들과
+                                        전시회에서 사용할 다양한 엑스 배너 제작물입니다.               
                                     </p>
                                     <button class="ctBoxMockupBtn">Mockup</button>
                                 </div>
@@ -45,6 +61,28 @@
 
                     </article>
                 </div><!--content-->
+                <div class="contentDetail">
+                    <div class="contentDtWrap">
+                        <span class="contentDtWrapClose"></span>
+                        <article class="contentDtEl">
+                            <h4>QUEENNYGEL BANNER / XBANNER</h4>
+                            <p>Adobe Photoshop, Adobe Illustrator</p>
+                            <img src="../assets/img/other/other_mock_01.png" alt="">
+                            <img src="../assets/img/other/other_mock_01.png" alt="">
+                            <img src="../assets/img/other/other_mock_01.png" alt="">
+                            <img src="../assets/img/other/other_mock_01.png" alt="">
+                        </article>
+                        <article class="contentDtEl">
+                            <h4>QUEENNYGEL BANNER / XBANNER</h4>
+                            <p>Adobe Photoshop, Adobe Illustrator</p>
+                            <img src="../assets/img/other/other_mock_02.png" alt="">
+                            <img src="../assets/img/other/other_mock_02.png" alt="">
+                            <img src="../assets/img/other/other_mock_02.png" alt="">
+                            <img src="../assets/img/other/other_mock_02.png" alt="">
+                            <img src="../assets/img/other/other_mock_02.png" alt="">
+                        </article>
+                    </div>
+                </div><!--contentDetail-->
             </div><!--introMain-->
             <div class="project_bg_line">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2063.4 722.5">
@@ -75,8 +113,27 @@
                 sideClose.addEventListener('click', () => {
                     sideMenu.style.width = '0px';
                 });
-                //페이지 연결
+                //목업버튼
+                var mockupBtn = document.querySelectorAll('.ctBoxMockupBtn');
+                var dtailArticl = document.querySelectorAll('.contentDtEl');
+                mockupBtn.forEach(function(el,idx){
+                    el.addEventListener('click',function(){
+                        document.querySelector('.introMain').style.overflowY = 'hidden';
+                        document.querySelector('.introMain').scrollTo( 0, 0 );
+                        document.querySelector('.contentDetail').style.display = 'block';
+                        document.querySelector('.contentDtWrap').scrollTo( 0, 0 );
+                        dtailArticl[idx].style.display = 'block'
+                    });
+                });
+                //목업클로즈
+                var mockupClose = document.querySelector('.contentDtWrapClose');
+                    mockupClose.addEventListener('click',() => {
+                        document.querySelector('.contentDetail').style.display = 'none';
+                        document.querySelector('.introMain').style.overflowY = 'scroll';
+                    });
 
+
+                //페이지 연결
                 function moveList(page) {
                     document.querySelector('.pj_bg_line').className.baseVal = 'pj_bg_lineBack';                                     
                     setTimeout(() => {
@@ -137,7 +194,6 @@
     .introMain{
         width: 100%;
         height: 100%;
-
         position: relative;
         background-color:#FBF9EE ; 
         z-index: 5;
@@ -369,6 +425,10 @@
         background: #505050 url('../assets/img/other/other_mock_01.png')center no-repeat;
         background-size: cover;
     }
+    .cbp02{
+        background: #505050 url('../assets/img/other/other_mock_02.png')center no-repeat;
+        background-size: cover;
+    }
     .ctBoxInfo{
         width: 50%;
         box-sizing: border-box;
@@ -454,6 +514,64 @@
     }
     .tb_c_mysql>span{
         background-color: #F14848;
+    }
+    /*목업클릭시 상세페이지 .introMain에 relative*/
+    .contentDetail{
+        display: none;
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #FBF9EE;
+        z-index: 999;
+        transition: 0.3s;
+    }
+    .contentDtWrap{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow-y: scroll;
+        scrollbar-color: #2C50FA rgba(255,255,255,0);
+        scrollbar-width: thin;
+    }
+    .contentDtWrap::-webkit-scrollbar {
+        width: 5px;
+    }
+    .contentDtWrap::-webkit-scrollbar-thumb {
+        background-color: #2C50FA;
+    }
+    .contentDtWrapClose{
+        display: block;
+        width: 40px;
+        height: 40px;
+        position:sticky;
+        top: 40px;
+        left: calc(100% - 60px);
+        cursor: pointer;
+        background: url('../assets/img/other/other_close.png')center no-repeat;
+        background-size: 25px auto;
+    }
+    .contentDtWrapClose:hover{
+        opacity: 0.6;
+    }
+    .contentDtEl{
+        width: 100%;
+        display: none;
+        text-align: center;
+    }
+    .contentDtEl>h4{
+        font-size: 20px;
+        font-weight: bold;
+        padding: 80px 0 0 0;
+    }
+    .contentDtEl>p{
+        font-size: 15px;
+        padding: 10px 0 120px 0;
+    }
+    .contentDtEl>img{
+        display: block;
+        margin: auto;
     }
 
     /*----------------------------------------------------------------------------------------------- */

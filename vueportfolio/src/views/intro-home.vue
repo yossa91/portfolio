@@ -64,6 +64,11 @@
 
     export default{
         name : 'intro-home',
+        data() {
+            return {
+                /*data type 내보내는법...*/
+            }
+        },
         mounted() {
                 //사이드메뉴 열기,닫기
                 var sideBtn = document.querySelector('.introIcoSidemenu');

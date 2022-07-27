@@ -39,8 +39,8 @@
                                         리뉴얼 사이트는 팀 프로젝트로 진행되었으며 메인페이지의 4section과 footer, Intro Category
                                         내 페이지, 로그인 페이지와 회원가입 페이지 제작부분을 맡아 진행하였습니다.
                                     </p>
-                                    <button class="ctBoxDemoBtn">Demo</button>
-                                    <button class="ctBoxReposBtn">Repos</button>
+                                    <a class="ctBoxDemoBtn" href="https://nw5jo.herokuapp.com/" target="_blank">Demo</a>
+                                    <a class="ctBoxReposBtn" href="https://github.com/yossa91/projectNw" target="_blank">Repos</a>
                                 </div>
                                 <div class="ctBoxSkill">
                                     <table>
@@ -82,16 +82,16 @@
                                 <div class="ctBoxInfo">
                                     <h4><span>01</span>노원문화원 웹 리뉴얼 사이트</h4>
                                     <p><span>Viewport</span>반응형</p>
-                                    <p><span>Part</span>Main Section04, Intro Category Page, Login Page</p>
+                                    <p><span>Part</span>All</p>
                                     <p class="ctBoxInfoTxt">
-                                        전체적으로 정리되어 보이지 않는 배너들로 페이지의 첫페이지가 혼란스러워 보이며
-                                        아쉬운 반응형 부분과 단색의 이미지들의 아쉬운 부분을 개선하여
-                                        제작하려 노력하였습니다.<br/>
-                                        리뉴얼 사이트는 팀 프로젝트로 진행되었으며 메인페이지의 4section과 footer, Intro Category
-                                        내 페이지, 로그인 페이지와 회원가입 페이지 제작부분을 맡아 진행하였습니다.
+                                        통일감이 낮은 레이아웃과 다소 오래되어 보이는 디자인은 번잡해보이며 중복되는 배너,
+                                        혼란을 줄 수 있는 메뉴 링크를 개선 하고자 리뉴얼 제작을 계획하게 되었습니다.<br/>
+                                        현장을 느낄 수 있는 메인페이지와 소개페이지, 판매처 리스트 페이지, 검색과 이벤트 안내 등 
+                                        사이트 접속의 주요 목적을 충족시킬 수 있도록 노력한 qna게시판, 로그인과 가입 페이지를
+                                        반응형으로 리뉴얼 하였습니다.
                                     </p>
-                                    <button class="ctBoxDemoBtn">Demo</button>
-                                    <button class="ctBoxReposBtn">Repos</button>
+                                    <a class="ctBoxDemoBtn" href="https://sumoontester.herokuapp.com/" target="_blank">Demo</a>
+                                    <a class="ctBoxReposBtn" href="https://github.com/yossa91/projectSm" target="_blank">Repos</a>
                                 </div>
                                 <div class="ctBoxSkill">
                                     <table>
@@ -107,22 +107,22 @@
                                         </tr>
                                         <tr>
                                             <td class="tb_cate tb_c_ejs"><span>EJS</span></td>
-                                            <td>main.ejs / nowon_intro...ejs / nowon_iC_...ejs / nowon_login...ejs</td>
+                                            <td>layout.ejs / Seomun_intro.ejs / Seomun_list.ejs / Seomun_notice...ejs / singup_...ejs </td>
                                             <td>html,ejs</td>
                                         </tr>
                                         <tr>
                                             <td class="tb_cate tb_c_css"><span>CSS</span></td>
-                                            <td>main.css / nowon_intro...css / nowon_iC_...css / nowon_login...css</td>
+                                            <td>main.css / intro...css / nowon_iC_...css / nowon_login...css</td>
                                             <td>css</td>
                                         </tr>
                                         <tr>
                                             <td class="tb_cate tb_c_js"><span>JS</span></td>
-                                            <td>main.js / signup.js</td>
-                                            <td>JavaScript,Nodejs</td>
+                                            <td>kakao.js / main.js</td>
+                                            <td>JavaScript,Nodejs,KakaoAPI</td>
                                         </tr>
                                         <tr>
                                             <td class="tb_cate tb_c_mysql"><span>MYSQL</span></td>
-                                            <td>nowon_introConduct Page</td>
+                                            <td>Seomun_notice Page</td>
                                             <td>MySQL,Heroku</td>
                                         </tr>
                                     </table>
@@ -490,6 +490,8 @@
         padding: 35px 0;
     }
     .ctBoxDemoBtn,.ctBoxReposBtn{
+        display: inline-block;
+        text-align: center;
         width: 85px;
         line-height: 24px;
         background-color: #2C50FA;
