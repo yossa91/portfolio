@@ -157,9 +157,11 @@
                 var sideClose = document.querySelector('.ism_btn');
                 sideBtn.addEventListener('click',() => {
                     sideMenu.style.width = '300px';
+                    document.querySelector('.introMain').style.overflowY = 'hidden';
                 });
                 sideClose.addEventListener('click', () => {
                     sideMenu.style.width = '0px';
+                    document.querySelector('.introMain').style.overflowY = 'scroll';
                 });
                 //페이지 연결
 
