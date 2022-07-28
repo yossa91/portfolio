@@ -53,13 +53,13 @@
                                             <th>Skills</th>
                                         </tr>
                                         <tr>
-                                            <td class="tb_cate tb_c_ejs"><span>EJS</span></td>
-                                            <td>main.ejs / nowon_intro...ejs / nowon_iC_...ejs / nowon_login...ejs</td>
-                                            <td>html,ejs</td>
+                                            <td class="tb_cate tb_c_ejs"><span>HTML</span></td>
+                                            <td>index.html / community.html</td>
+                                            <td>html</td>
                                         </tr>
                                         <tr>
                                             <td class="tb_cate tb_c_css"><span>CSS</span></td>
-                                            <td>main.css / nowon_intro...css / nowon_iC_...css / nowon_login...css</td>
+                                            <td>common.css / index.css / community.css</td>
                                             <td>css</td>
                                         </tr>
                                     </table>
@@ -92,14 +92,19 @@
                                             <th>Skills</th>
                                         </tr>
                                         <tr>
-                                            <td class="tb_cate tb_c_ejs"><span>EJS</span></td>
-                                            <td>main.ejs / nowon_intro...ejs / nowon_iC_...ejs / nowon_login...ejs</td>
-                                            <td>html,ejs</td>
+                                            <td class="tb_cate tb_c_ejs"><span>HTML</span></td>
+                                            <td>index.html / artplace.html</td>
+                                            <td>html</td>
                                         </tr>
                                         <tr>
                                             <td class="tb_cate tb_c_css"><span>CSS</span></td>
-                                            <td>main.css / nowon_intro...css / nowon_iC_...css / nowon_login...css</td>
+                                            <td>common.css / main.css / artplace.css</td>
                                             <td>css</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_cate tb_c_js"><span>JS</span></td>
+                                            <td>index.js</td>
+                                            <td>Javascript</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -131,14 +136,19 @@
                                             <th>Skills</th>
                                         </tr>
                                         <tr>
-                                            <td class="tb_cate tb_c_ejs"><span>EJS</span></td>
-                                            <td>main.ejs / nowon_intro...ejs / nowon_iC_...ejs / nowon_login...ejs</td>
-                                            <td>html,ejs</td>
+                                            <td class="tb_cate tb_c_ejs"><span>HTML</span></td>
+                                            <td>index.thml / sub.html</td>
+                                            <td>html</td>
                                         </tr>
                                         <tr>
                                             <td class="tb_cate tb_c_css"><span>CSS</span></td>
-                                            <td>main.css / nowon_intro...css / nowon_iC_...css / nowon_login...css</td>
+                                            <td>common.css / index.css / sub.css</td>
                                             <td>css</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_cate tb_c_js"><span>JS</span></td>
+                                            <td>index.js</td>
+                                            <td>Javascript</td>
                                         </tr>
                                     </table>
                                 </div>

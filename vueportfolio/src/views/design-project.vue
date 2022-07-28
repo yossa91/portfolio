@@ -61,7 +61,7 @@
 
                     </article>
                 </div><!--content-->
-                <div class="contentDetail">
+                <div class="contentDetail"><!--본문모달-->
                     <div class="contentDtWrap">
                         <span class="contentDtWrapClose"></span>
                         <article class="contentDtEl">
@@ -116,21 +116,33 @@
                 //목업버튼
                 var mockupBtn = document.querySelectorAll('.ctBoxMockupBtn');
                 var dtailArticl = document.querySelectorAll('.contentDtEl');
+                var mockupClose = document.querySelector('.contentDtWrapClose');
+                var scrollT = 0;
+
                 mockupBtn.forEach(function(el,idx){
                     el.addEventListener('click',function(){
+                        //목업클로즈 시 원래 스크롤 위치로 이동을 위한 값
+                        var sTop = document.querySelector('.introMain').scrollTop;
+                        scrollT = sTop;
+                        //목업 최상단이동
                         document.querySelector('.introMain').style.overflowY = 'hidden';
-                        document.querySelector('.introMain').scrollTo( 0, 0 );
+                        document.querySelector('.introMain').scrollTop = 0;
                         document.querySelector('.contentDetail').style.display = 'block';
-                        document.querySelector('.contentDtWrap').scrollTo( 0, 0 );
-                        dtailArticl[idx].style.display = 'block'
+                        document.querySelector('.contentDtWrap').scrollTop = 0;
+                        for(var i =0 ; i < dtailArticl.length ; i++){
+                            dtailArticl[i].style.display = 'none';
+                        }
+                        dtailArticl[idx].style.display = 'block';
                     });
                 });
                 //목업클로즈
-                var mockupClose = document.querySelector('.contentDtWrapClose');
-                    mockupClose.addEventListener('click',() => {
-                        document.querySelector('.contentDetail').style.display = 'none';
-                        document.querySelector('.introMain').style.overflowY = 'scroll';
-                    });
+                mockupClose.addEventListener('click',() => {
+                    console.log(scrollT);
+                    document.querySelector('.contentDetail').style.display = 'none';
+                    document.querySelector('.introMain').style.overflowY = 'scroll';
+                    //목업클로즈 시 원래 스크롤 위치로 이동
+                    document.querySelector('.introMain').scrollTop = scrollT;
+                });
 
 
                 //페이지 연결
