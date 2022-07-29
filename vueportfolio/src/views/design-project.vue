@@ -42,7 +42,7 @@
                                     <button class="ctBoxMockupBtn">Mockup</button>
                                 </div>
                         </section>
-                         <section>
+                        <section>
                             <div class="ctBoxPhoto cbp02"></div>
                                 <div class="ctBoxInfo">
                                     <h4><span>02</span>QUEENNYGEL BANNER / XBANNER</h4>
@@ -51,6 +51,22 @@
                                     <p class="ctBoxInfoTxt">
                                         QUEENNYGEL의 온라인 홍보를 위해 제작된 다양한 배너 디자인과
                                         오프라인에서 사용된 엑스배너 디자인 입니다.<br/><br/>
+                                        SNS에서 홍보 이벤트를 목적으로 사용할 다양한 배너 제작물로
+                                        간단한 촬영과 합성으로 때에 따른 컨셉으로 제작한 배너들과
+                                        전시회에서 사용할 다양한 엑스 배너 제작물입니다.               
+                                    </p>
+                                    <button class="ctBoxMockupBtn">Mockup</button>
+                                </div>
+                        </section>
+                        <section>
+                            <div class="ctBoxPhoto cbp03"></div>
+                                <div class="ctBoxInfo">
+                                    <h4><span>03</span>QUEENNYGEL PACKAGE / BANNER</h4>
+                                    <p><span>Type</span>시즌 패키지, 배너 디자인</p>
+                                    <p><span>Tool</span>Adobe Photoshop, Adobe Illustrator</p>
+                                    <p class="ctBoxInfoTxt">
+                                        QUEENNYGEL의 시즌제품 패키지 제작과 
+                                        온라인 홍보를 위해 제작된 다양한 배너 디자인 입니다.<br/><br/>
                                         SNS에서 홍보 이벤트를 목적으로 사용할 다양한 배너 제작물로
                                         간단한 촬영과 합성으로 때에 따른 컨셉으로 제작한 배너들과
                                         전시회에서 사용할 다양한 엑스 배너 제작물입니다.               
@@ -67,19 +83,17 @@
                         <article class="contentDtEl">
                             <h4>QUEENNYGEL BANNER / XBANNER</h4>
                             <p>Adobe Photoshop, Adobe Illustrator</p>
-                            <img src="../assets/img/other/other_mock_01.png" alt="">
-                            <img src="../assets/img/other/other_mock_01.png" alt="">
-                            <img src="../assets/img/other/other_mock_01.png" alt="">
-                            <img src="../assets/img/other/other_mock_01.png" alt="">
+                            <img src="../assets/img/other/other_mockup_01.png" alt="">
                         </article>
                         <article class="contentDtEl">
                             <h4>QUEENNYGEL BANNER / XBANNER</h4>
                             <p>Adobe Photoshop, Adobe Illustrator</p>
-                            <img src="../assets/img/other/other_mock_02.png" alt="">
-                            <img src="../assets/img/other/other_mock_02.png" alt="">
-                            <img src="../assets/img/other/other_mock_02.png" alt="">
-                            <img src="../assets/img/other/other_mock_02.png" alt="">
-                            <img src="../assets/img/other/other_mock_02.png" alt="">
+                            <img src="../assets/img/other/other_mockup_02.png" alt="">
+                        </article>
+                        <article class="contentDtEl">
+                            <h4>QUEENNYGEL PACKAGE / BANNER</h4>
+                            <p>Adobe Photoshop, Adobe Illustrator</p>
+                            <img src="../assets/img/other/other_mockup_03.png" alt="">
                         </article>
                     </div>
                 </div><!--contentDetail-->
@@ -443,6 +457,10 @@
         background: #505050 url('../assets/img/other/other_mock_02.png')center no-repeat;
         background-size: cover;
     }
+    .cbp03{
+        background: #505050 url('../assets/img/other/other_mock_03.png')center no-repeat;
+        background-size: cover;
+    }
     .ctBoxInfo{
         width: 50%;
         box-sizing: border-box;
@@ -537,7 +555,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #FBF9EE;
+        background-color: #fff;
         z-index: 999;
         transition: 0.3s;
     }
