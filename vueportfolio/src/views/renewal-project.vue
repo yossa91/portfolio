@@ -39,6 +39,7 @@
                                         리뉴얼 사이트는 팀 프로젝트로 진행되었으며 메인페이지의 4section과 footer, Intro Category
                                         내 페이지, 로그인 페이지와 회원가입 페이지 제작부분을 맡아 진행하였습니다.
                                     </p>
+                                    <a class="ctBoxMockupBtn">Mockup</a>
                                     <a class="ctBoxDemoBtn" href="https://nw5jo.herokuapp.com/" target="_blank">Demo</a>
                                     <a class="ctBoxReposBtn" href="https://github.com/yossa91/projectNw" target="_blank">Repos</a>
                                 </div>
@@ -80,7 +81,7 @@
                         <section>
                             <div class="ctBoxPhoto cbp02"></div>
                                 <div class="ctBoxInfo">
-                                    <h4><span>01</span>노원문화원 웹 리뉴얼 사이트</h4>
+                                    <h4><span>02</span>서문시장야시장 웹 리뉴얼 사이트</h4>
                                     <p><span>Viewport</span>반응형</p>
                                     <p><span>Part</span>All</p>
                                     <p class="ctBoxInfoTxt">
@@ -90,6 +91,7 @@
                                         사이트 접속의 주요 목적을 충족시킬 수 있도록 노력한 qna게시판, 로그인과 가입 페이지를
                                         반응형으로 리뉴얼 하였습니다.
                                     </p>
+                                    <a class="ctBoxMockupBtn">Mockup</a>
                                     <a class="ctBoxDemoBtn" href="https://sumoontester.herokuapp.com/" target="_blank">Demo</a>
                                     <a class="ctBoxReposBtn" href="https://github.com/yossa91/projectSm" target="_blank">Repos</a>
                                 </div>
@@ -131,6 +133,21 @@
 
                     </article>
                 </div><!--content-->
+                <div class="contentDetail"><!--본문모달-->
+                    <div class="contentDtWrap">
+                        <span class="contentDtWrapClose"></span>
+                        <article class="contentDtEl">
+                            <h4>노원문화원 웹 리뉴얼 사이트</h4>
+                            <p>반응형 리뉴얼 사이트</p>
+                            <img src="../assets/img/renewal/project_mockup_01.png" alt="">
+                        </article>
+                        <article class="contentDtEl">
+                            <h4>서문시장야시장 웹 리뉴얼 사이트</h4>
+                            <p>반응형 리뉴얼 사이트</p>
+                            <img src="../assets/img/renewal/project_mockup_02.png" alt="">
+                        </article>
+                    </div>
+                </div><!--contentDetail-->
             </div><!--introMain-->
             <div class="project_bg_line">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2063.4 722.5">
@@ -151,6 +168,38 @@
     export default{
         name : 'about-maker',
         mounted() {
+                //목업버튼
+                    var mockupBtn = document.querySelectorAll('.ctBoxMockupBtn');
+                    var dtailArticl = document.querySelectorAll('.contentDtEl');
+                    var mockupClose = document.querySelector('.contentDtWrapClose');
+                    var scrollT = 0;
+
+                    mockupBtn.forEach(function(el,idx){
+                        el.addEventListener('click',function(){
+                            //목업클로즈 시 원래 스크롤 위치로 이동을 위한 값
+                            var sTop = document.querySelector('.introMain').scrollTop;
+                            scrollT = sTop;
+                            //목업 최상단이동
+                            document.querySelector('.introMain').style.overflowY = 'hidden';
+                            document.querySelector('.introMain').scrollTop = 0;
+                            document.querySelector('.contentDetail').style.display = 'block';
+                            document.querySelector('.contentDtWrap').scrollTop = 0;
+
+                            for(var i =0 ; i < dtailArticl.length ; i++){
+                                dtailArticl[i].style.display = 'none';
+                            }
+                            //목업 길이 내용물에 맞춰서
+                            dtailArticl[idx].style.display = 'block';
+                        });
+                    });
+                    //목업클로즈
+                    mockupClose.addEventListener('click',() => {
+                        console.log(scrollT);
+                        document.querySelector('.contentDetail').style.display = 'none';
+                        document.querySelector('.introMain').style.overflowY = 'scroll';
+                        //목업클로즈 시 원래 스크롤 위치로 이동
+                        document.querySelector('.introMain').scrollTop = scrollT;
+                    });
                 //사이드메뉴 열기,닫기
                 var sideBtn = document.querySelector('.introIcoSidemenu');
                 var sideMenu = document.querySelector('.introSideMenu');
@@ -205,9 +254,7 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;300;400;500;700&display=swap');
     main{
-        font-family: 'IBM Plex Sans KR', sans-serif;
         width: 100%;
         height: 100vh; 
         background-color: #E5BE07;
@@ -491,12 +538,11 @@
     .ctBoxInfoTxt{
         padding: 35px 0;
     }
-    .ctBoxDemoBtn,.ctBoxReposBtn{
+    .ctBoxDemoBtn,.ctBoxReposBtn,.ctBoxMockupBtn{
         display: inline-block;
         text-align: center;
         width: 85px;
         line-height: 24px;
-        background-color: #2C50FA;
         border: none;
         border-radius: 20px;
         color: #fff;
@@ -504,8 +550,20 @@
         cursor: pointer;
         transition: 0.2s;
     }
+    .ctBoxMockupBtn{
+        background-color:#E5BE07;
+        color: #333;
+        cursor: pointer;
+    }
+    .ctBoxDemoBtn,.ctBoxReposBtn{
+        background-color: #2C50FA;
+        color: #fff;
+    }           
     .ctBoxDemoBtn:hover, .ctBoxReposBtn:hover{
-        opacity: 0.6;
+        background-color: #7f95ff;
+    }
+    .ctBoxMockupBtn:hover{
+        background-color:#ffe677;
     }
     /**/
     .ctBoxSkill{
@@ -527,14 +585,18 @@
         line-height: 25px;
         text-align: left;
         padding: 0 0 0 10px;
-        color: #AAA;
+        color: #929292;
+        font-weight: 300;
     }
     .tb_cate>span{
         display: inline-block;
+        font-size: 14px;
         line-height: 20px;
+        vertical-align: middle;
         padding: 0 10px;
         border-radius: 4px;
         color: #fff;
+        font-weight: 400;
     }
     .tb_c_ejs>span{
         background-color: #2C50FA;
@@ -547,6 +609,70 @@
     }
     .tb_c_mysql>span{
         background-color: #F14848;
+    }
+    /*목업클릭시 상세페이지 .introMain에 relative*/
+    .contentDetail{
+        display: none;
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 999;
+        transition: 0.3s;
+    }
+    .contentDtWrap{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow-y: scroll;
+        scrollbar-color: #2C50FA rgba(255,255,255,0);
+        scrollbar-width: thin;
+    }
+    .contentDtWrap::-webkit-scrollbar {
+        width: 5px;
+    }
+    .contentDtWrap::-webkit-scrollbar-thumb {
+        background-color: #2C50FA;
+    }
+    .contentDtWrapClose{
+        display: block;
+        width: 40px;
+        height: 40px;
+        position:sticky;
+        top: 40px;
+        left: calc(100% - 60px);
+        cursor: pointer;
+        background: url('../assets/img/other/other_close.png')center no-repeat;
+        background-size: 25px auto;
+    }
+    .contentDtWrapClose:hover{
+        opacity: 0.6;
+    }
+    .contentDtEl{
+        width: 100%;
+        display: none;
+        text-align: center;
+        color: #333;
+    }
+    .contentDtEl>img{
+        display: block;
+        margin: auto;
+        width: 900px;
+    }
+    .contentDtEl>h4{
+        font-size: 20px;
+        font-weight: bold;
+        padding: 80px 0 0 0;
+    }
+    .contentDtEl>p{
+        font-size: 15px;
+        padding: 10px 0 40px 0;
+    }
+    .contentDtEl>img{
+        display: block;
+        margin: auto;
     }
 
     /*----------------------------------------------------------------------------------------------- */
@@ -562,15 +688,18 @@
     }
     /*---------------------------------------------------태블릿-------------------------------------------- */
     @media screen and (max-width: 950px){   
-        main{
-            padding: calc(50vh - 400px) 15px calc(50vh - 400px) 15px;
-            height: 100%;
+         main{
+            padding: 10vh 15px 10vh 15px;
+        }
+        .introMain{
+            height: 80vh;
+            scrollbar-width: none;
+        }
+        .introMain::-webkit-scrollbar {
+            width: none;
         }
         #introWrap{
             height: 100%;
-            margin: auto;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .3);
-            position: relative;
         }
         /*SVG~~~*/
         .project_bg_line{
@@ -619,18 +748,22 @@
         }
         .ctBoxSkill td{
             vertical-align:middle;
+            word-break: break-all;
+        }
+        /* */
+        .ctBoxDemoBtn,.ctBoxReposBtn,.ctBoxMockupBtn{
+            width: 75px;
+            margin-right: 7px;
+            font-size: 14px;
+        }
+        /*목업 이미지 와이드 */
+        .contentDtEl>img{
+            width: 100%;
         }
     
     }
     /*---------------------------------------------------모바일-------------------------------------------- */
     @media screen and (max-width: 650px){   
-        main{
-            padding: calc(50vh - 400px) 10px calc(50vh - 400px) 10px;
-            height: 100%;
-        }
-        .introMain{
-            overflow: hidden;
-        }
         /*SVG~~~*/
         .project_bg_line{
             position: absolute;
@@ -643,7 +776,6 @@
          /*본문section*/
         .contentBox{
             padding: 0;
-            
         }
         .contentBox>section{
             padding: 40px 0 50px 0;

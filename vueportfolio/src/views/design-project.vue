@@ -145,9 +145,11 @@
                         document.querySelector('.introMain').scrollTop = 0;
                         document.querySelector('.contentDetail').style.display = 'block';
                         document.querySelector('.contentDtWrap').scrollTop = 0;
+
                         for(var i =0 ; i < dtailArticl.length ; i++){
                             dtailArticl[i].style.display = 'none';
                         }
+                        //목업 길이 내용물에 맞춰서
                         dtailArticl[idx].style.display = 'block';
                     });
                 });
@@ -202,9 +204,7 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;300;400;500;700&display=swap');
     main{
-        font-family: 'IBM Plex Sans KR', sans-serif;
         width: 100%;
         height: 100vh; 
         background-color: #E5BE07;
@@ -526,14 +526,18 @@
         line-height: 25px;
         text-align: left;
         padding: 0 0 0 10px;
-        color: #AAA;
+        color: #929292;
+        font-weight: 300;
     }
     .tb_cate>span{
         display: inline-block;
+        font-size: 14px;
         line-height: 20px;
+        vertical-align: middle;
         padding: 0 10px;
         border-radius: 4px;
         color: #fff;
+        font-weight: 400;
     }
     .tb_c_ejs>span{
         background-color: #2C50FA;
@@ -591,6 +595,12 @@
         width: 100%;
         display: none;
         text-align: center;
+        color: #333;
+    }
+    .contentDtEl>img{
+        display: block;
+        margin: auto;
+        width: 900px;
     }
     .contentDtEl>h4{
         font-size: 20px;
@@ -620,8 +630,14 @@
     /*---------------------------------------------------태블릿-------------------------------------------- */
     @media screen and (max-width: 950px){   
         main{
-            padding: calc(50vh - 400px) 15px calc(50vh - 400px) 15px;
-            height: 100%;
+            padding: 10vh 15px 10vh 15px;
+        }
+        .introMain{
+            height: 80vh;
+            scrollbar-width: none;
+        }
+        .introMain::-webkit-scrollbar {
+            width: none;
         }
         #introWrap{
             height: 100%;
@@ -677,17 +693,15 @@
         .ctBoxSkill td{
             vertical-align:middle;
         }
+        /*목업 이미지 와이드 */
+        .contentDtEl>img{
+            width: 100%;
+        }
     
     }
     /*---------------------------------------------------모바일-------------------------------------------- */
     @media screen and (max-width: 650px){   
-        main{
-            padding: calc(50vh - 400px) 10px calc(50vh - 400px) 10px;
-            height: 100%;
-        }
-        .introMain{
-            overflow: hidden;
-        }
+
         /*SVG~~~*/
         .project_bg_line{
             position: absolute;

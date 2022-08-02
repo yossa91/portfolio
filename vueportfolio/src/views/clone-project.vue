@@ -62,6 +62,11 @@
                                             <td>common.css / index.css / community.css</td>
                                             <td>css</td>
                                         </tr>
+                                        <tr>
+                                            <td class="tb_cate tb_c_js"><span>Plugin</span></td>
+                                            <td>index.html</td>
+                                            <td>Swiper Plugin</td>
+                                        </tr>
                                     </table>
                                 </div>
                         </section>
@@ -232,9 +237,7 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;300;400;500;700&display=swap');
     main{
-        font-family: 'IBM Plex Sans KR', sans-serif;
         width: 100%;
         height: 100vh; 
         background-color: #E5BE07;
@@ -558,14 +561,18 @@
         line-height: 25px;
         text-align: left;
         padding: 0 0 0 10px;
-        color: #AAA;
+        color: #929292;
+        font-weight: 300;
     }
     .tb_cate>span{
         display: inline-block;
+        font-size: 14px;
         line-height: 20px;
+        vertical-align: middle;
         padding: 0 10px;
         border-radius: 4px;
         color: #fff;
+        font-weight: 400;
     }
     .tb_c_ejs>span{
         background-color: #2C50FA;
@@ -593,14 +600,17 @@
     /*---------------------------------------------------태블릿-------------------------------------------- */
     @media screen and (max-width: 950px){   
         main{
-            padding: calc(50vh - 400px) 15px calc(50vh - 400px) 15px;
-            height: 100%;
+            padding: 10vh 15px 10vh 15px;
+        }
+        .introMain{
+            height: 80vh;
+            scrollbar-width: none;
+        }
+        .introMain::-webkit-scrollbar {
+            width: none;
         }
         #introWrap{
             height: 100%;
-            margin: auto;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .3);
-            position: relative;
         }
         /*SVG~~~*/
         .project_bg_line{
@@ -649,18 +659,12 @@
         }
         .ctBoxSkill td{
             vertical-align:middle;
+            word-break: break-all;
         }
     
     }
     /*---------------------------------------------------모바일-------------------------------------------- */
     @media screen and (max-width: 650px){   
-        main{
-            padding: calc(50vh - 400px) 10px calc(50vh - 400px) 10px;
-            height: 100%;
-        }
-        .introMain{
-            overflow: hidden;
-        }
         /*SVG~~~*/
         .project_bg_line{
             position: absolute;

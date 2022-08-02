@@ -151,9 +151,7 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;300;400;500;700&display=swap');
     main{
-        font-family: 'IBM Plex Sans KR', sans-serif;
         width: 100%;
         height: 100vh; 
         background-color: #E5BE07;
@@ -431,7 +429,7 @@
         padding: 0 70px;
     }
     .abMeInfo>h2{
-        font-weight: bold;
+        font-weight: 500;
         font-size: 18px;
         line-height: 30px;
         padding-bottom: 20px;
@@ -536,7 +534,7 @@
     /*---------------------------------------------------태블릿-------------------------------------------- */
     @media screen and (max-width: 950px){   
         main{
-            padding: calc(50vh - 400px) 15px calc(50vh - 400px) 15px;
+            padding: 10vh 15px 10vh 15px;
             height: 100%;
         }
         #introWrap{
@@ -667,10 +665,6 @@
     }
     /*---------------------------------------------------모바일-------------------------------------------- */
     @media screen and (max-width: 650px){   
-        main{
-            padding: calc(50vh - 400px) 10px calc(50vh - 400px) 10px;
-            height: 100%;
-        }
         /*SVG~~~*/
         .about_line_top{
             right: -220px;

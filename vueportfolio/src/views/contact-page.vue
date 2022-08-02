@@ -101,9 +101,7 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;300;400;500;700&display=swap');
     main{
-        font-family: 'IBM Plex Sans KR', sans-serif;
         width: 100%;
         height: 100vh; 
         background-color: #E5BE07;
@@ -262,7 +260,8 @@
     }
     .contactTitle h3{
         font-size: 60px;
-        font-weight: bold;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 700;
         padding-top: 75px;
         height: 75px;
         overflow: hidden;
@@ -329,7 +328,8 @@
     }
     .contactText>h4{
         font-size: 30px;
-        font-weight: bold;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 700;
         padding: 7px 0 0 0 ;
     }
     .contactText span{
@@ -344,6 +344,9 @@
     .contactText span:nth-of-type(2){
         background: url('../assets/img/intro/main_info_hv.png')right center no-repeat;
         margin-top: 20px;
+    }
+    .contactText p{
+        padding-top: 10px;
     }
     
 

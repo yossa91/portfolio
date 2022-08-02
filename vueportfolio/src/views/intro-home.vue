@@ -134,9 +134,7 @@
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;300;400;500;700&display=swap');
     main{
-        font-family: 'IBM Plex Sans KR', sans-serif;
         width: 100%;
         height: 100vh;
         background-color: #E5BE07;
@@ -425,7 +423,8 @@
         height: 85px;
         box-sizing: border-box;
         font-size: 80px;
-        font-weight: bold;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 700;
         overflow: hidden;
         padding-top: 85px;
         animation-name: textUp;
