@@ -85,11 +85,11 @@
                                     <p><span>Viewport</span>반응형</p>
                                     <p><span>Part</span>All</p>
                                     <p class="ctBoxInfoTxt">
-                                        통일감이 낮은 레이아웃과 다소 오래되어 보이는 디자인은 번잡해보이며 중복되는 배너,
-                                        혼란을 줄 수 있는 메뉴 링크를 개선 하고자 리뉴얼 제작을 계획하게 되었습니다.<br/>
-                                        현장을 느낄 수 있는 메인페이지와 소개페이지, 판매처 리스트 페이지, 검색과 이벤트 안내 등 
-                                        사이트 접속의 주요 목적을 충족시킬 수 있도록 노력한 qna게시판, 로그인과 가입 페이지를
-                                        반응형으로 리뉴얼 하였습니다.
+                                        다소 오래되어 보이는 디자인에 통합 될 수 있는 메뉴들과 복잡한 이미지를 개섢하고자
+                                        리뉴얼을 계획하게 되었습니다.<br/>
+                                        중심이 되는 페이지를 중심으로 메인 페이지를 깔끔하게 제작하고 각 페이지 별 사이트 접속의
+                                        주요 목적을 충족시킬 수 있도록 제작하려 노력했으며, 반응형으로 다양한 기기에서 최적화
+                                        될 수 있도록 제작하려 노력하였습니다.
                                     </p>
                                     <a class="ctBoxMockupBtn">Mockup</a>
                                     <a class="ctBoxDemoBtn" href="https://sumoontester.herokuapp.com/" target="_blank">Demo</a>
@@ -130,6 +130,58 @@
                                     </table>
                                 </div>
                         </section>
+                        <section>
+                            <div class="ctBoxPhoto cbp03"></div>
+                                <div class="ctBoxInfo">
+                                    <h4><span>03</span>그린씽 웹 리뉴얼 사이트</h4>
+                                    <p><span>Viewport</span>반응형</p>
+                                    <p><span>Part</span>All</p>
+                                    <p class="ctBoxInfoTxt">
+                                        통일감이 낮은 레이아웃과 다소 오래되어 보이는 디자인은 번잡해보이며 중복되는 배너,
+                                        혼란을 줄 수 있는 메뉴 링크를 개선 하고자 리뉴얼 제작을 계획하게 되었습니다.<br/>
+                                        현장을 느낄 수 있는 메인페이지와 소개페이지, 판매처 리스트 페이지, 검색과 이벤트 안내 등 
+                                        사이트 접속의 주요 목적을 충족시킬 수 있도록 노력한 qna게시판, 로그인과 가입 페이지를
+                                        반응형으로 리뉴얼 하였습니다.
+                                    </p>
+                                    <a class="ctBoxMockupBtn">Mockup</a>
+                                    <a class="ctBoxDemoBtn" href="https://greenssing.herokuapp.com/" target="_blank">Demo</a>
+                                    <a class="ctBoxReposBtn" href="https://github.com/yossa91/projectGs" target="_blank">Repos</a>
+                                </div>
+                                <div class="ctBoxSkill">
+                                    <table>
+                                        <colgroup>
+                                            <col width = '15%'>
+                                            <col width = '*'>
+                                            <col width = '25%'>
+                                        </colgroup>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>Source</th>
+                                            <th>Skills</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_cate tb_c_ejs"><span>EJS</span></td>
+                                            <td>수정중----------</td>
+                                            <td>html,ejs</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_cate tb_c_css"><span>CSS</span></td>
+                                            <td>수정중----------</td>
+                                            <td>css</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_cate tb_c_js"><span>JS</span></td>
+                                            <td>수정중----------</td>
+                                            <td>JavaScript,Nodejs,KakaoAPI</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tb_cate tb_c_mysql"><span>MYSQL</span></td>
+                                            <td>수정중----------</td>
+                                            <td>MySQL,Heroku</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                        </section>
 
                     </article>
                 </div><!--content-->
@@ -145,6 +197,11 @@
                             <h4>서문시장야시장 웹 리뉴얼 사이트</h4>
                             <p>반응형 리뉴얼 사이트</p>
                             <img src="../assets/img/renewal/project_mockup_02.png" alt="">
+                        </article>
+                        <article class="contentDtEl">
+                            <h4>그린씽 웹 리뉴얼 사이트</h4>
+                            <p>반응형 리뉴얼 사이트</p>
+                            <img src="" alt="">수정중----------
                         </article>
                     </div>
                 </div><!--contentDetail-->
@@ -505,6 +562,10 @@
     }
     .cbp02{
         background: #fff url('../assets/img/renewal/project_mock_01.png')center no-repeat;
+        background-size: contain;
+    }
+    .cbp03{
+        background: #fff url('../assets/img/renewal/project_mock_03.png')center no-repeat;
         background-size: contain;
     }
     .ctBoxInfo{
