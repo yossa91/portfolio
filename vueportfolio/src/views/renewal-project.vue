@@ -161,23 +161,18 @@
                                         </tr>
                                         <tr>
                                             <td class="tb_cate tb_c_ejs"><span>EJS</span></td>
-                                            <td>수정중----------</td>
+                                            <td>main.ejs / guide_...ejs</td>
                                             <td>html,ejs</td>
                                         </tr>
                                         <tr>
                                             <td class="tb_cate tb_c_css"><span>CSS</span></td>
-                                            <td>수정중----------</td>
+                                            <td>common.css / guide_...css</td>
                                             <td>css</td>
                                         </tr>
                                         <tr>
                                             <td class="tb_cate tb_c_js"><span>JS</span></td>
-                                            <td>수정중----------</td>
+                                            <td>main.js</td>
                                             <td>JavaScript,Nodejs,KakaoAPI</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="tb_cate tb_c_mysql"><span>MYSQL</span></td>
-                                            <td>수정중----------</td>
-                                            <td>MySQL,Heroku</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -201,7 +196,7 @@
                         <article class="contentDtEl">
                             <h4>그린씽 웹 리뉴얼 사이트</h4>
                             <p>반응형 리뉴얼 사이트</p>
-                            <img src="" alt="">수정중----------
+                            <img src="" alt="">
                         </article>
                     </div>
                 </div><!--contentDetail-->
