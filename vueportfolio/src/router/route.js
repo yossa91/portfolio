@@ -1,6 +1,10 @@
 
 import home from '../views/intro-home.vue';
 
+
+const aboutLink  = () =>{return import('../views/about-maker.vue')}
+
+
 export const routes = [
     {
         path : '/', 
@@ -12,7 +16,7 @@ export const routes = [
     },{ 
         path : '/about',
         name : 'about',
-        component : () => import('../views/about-maker.vue')
+        component : aboutLink
     },{ 
         path : '/renewal',
         name : 'renewal',

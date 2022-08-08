@@ -83,17 +83,20 @@
                         <article class="contentDtEl">
                             <h4>QUEENNYGEL BANNER / XBANNER</h4>
                             <p>Adobe Photoshop, Adobe Illustrator</p>
-                            <img src="../assets/img/other/other_mockup_01.png" alt="">
+                            <img src="../assets/img/img_row/other_mockup_01_01.jpg" alt="">
+                            <img src="../assets/img/img_row/other_mockup_01_02.jpg" alt="">
                         </article>
                         <article class="contentDtEl">
                             <h4>QUEENNYGEL BANNER / XBANNER</h4>
                             <p>Adobe Photoshop, Adobe Illustrator</p>
-                            <img src="../assets/img/other/other_mockup_02.png" alt="">
+                            <img src="../assets/img/img_row/other_mockup_02_01.jpg" alt="">
+                            <img src="../assets/img/img_row/other_mockup_02_02.jpg" alt="">
                         </article>
                         <article class="contentDtEl">
                             <h4>QUEENNYGEL PACKAGE / BANNER</h4>
                             <p>Adobe Photoshop, Adobe Illustrator</p>
-                            <img src="../assets/img/other/other_mockup_03.png" alt="">
+                            <img src="../assets/img/img_row/other_mockup_03_01.jpg" alt="">
+                            <img src="../assets/img/img_row/other_mockup_03_02.jpg" alt="">
                         </article>
                     </div>
                 </div><!--contentDetail-->
@@ -170,7 +173,7 @@
                         document.querySelector('.introMainClose').style.opacity = 1;
                         document.querySelector('.introMainClose').style.zIndex = 99;
                             setTimeout(() => {
-                               location.replace('/' + page);
+                               location.href='/' + page ;
                             }, 100);
                     }, 1000);
                 }
@@ -450,15 +453,15 @@
         height: 450px;
     }
     .cbp01{
-        background: #505050 url('../assets/img/other/other_mock_01.png')center no-repeat;
+        background: #505050 url('../assets/img/img_row/other_mock_01.jpg')center no-repeat;
         background-size: cover;
     }
     .cbp02{
-        background: #505050 url('../assets/img/other/other_mock_02.png')center no-repeat;
+        background: #505050 url('../assets/img/img_row/other_mock_02.jpg')center no-repeat;
         background-size: cover;
     }
     .cbp03{
-        background: #505050 url('../assets/img/other/other_mock_03.png')center no-repeat;
+        background: #505050 url('../assets/img/img_row/other_mock_03.jpg')center no-repeat;
         background-size: cover;
     }
     .ctBoxInfo{

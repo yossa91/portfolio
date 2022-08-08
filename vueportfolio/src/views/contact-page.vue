@@ -67,7 +67,7 @@
                         document.querySelector('.introMainClose').style.opacity = 1;
                         document.querySelector('.introMainClose').style.zIndex = 99;
                             setTimeout(() => {
-                               location.replace('/' + page);
+                               location.href='/' + page ;
                             }, 100);
                     }, 100);
                 }

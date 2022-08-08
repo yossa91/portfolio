@@ -191,12 +191,14 @@
                         <article class="contentDtEl">
                             <h4>노원문화원 웹 리뉴얼 사이트</h4>
                             <p>반응형 리뉴얼 사이트</p>
-                            <img src="../assets/img/renewal/project_mockup_01.png" alt="">
+                            <img src="../assets/img/img_row/project_mockup_01_01.jpg" alt="">
+                            <img src="../assets/img/img_row/project_mockup_01_02.jpg" alt="">
                         </article>
                         <article class="contentDtEl">
                             <h4>서문시장야시장 웹 리뉴얼 사이트</h4>
                             <p>반응형 리뉴얼 사이트</p>
-                            <img src="../assets/img/renewal/project_mockup_02.png" alt="">
+                            <img src="../assets/img/img_row/project_mockup_02_01.jpg" alt="">
+                            <img src="../assets/img/img_row/project_mockup_02_02.jpg" alt="">
                         </article>
                         <article class="contentDtEl">
                             <h4>그린씽 웹 리뉴얼 사이트</h4>
@@ -277,7 +279,7 @@
                         document.querySelector('.introMainClose').style.opacity = 1;
                         document.querySelector('.introMainClose').style.zIndex = 99;
                             setTimeout(() => {
-                               location.replace('/' + page);
+                               location.href='/' + page ;
                             }, 100);
                     }, 1000);
                 }
@@ -557,15 +559,15 @@
         height: 450px;
     }
     .cbp01{
-        background: #fff url('../assets/img/renewal/project_mock_02.png')center no-repeat;
+        background: #fff url('../assets/img/img_row/project_mock_02.jpg')center no-repeat;
         background-size: contain;
     }
     .cbp02{
-        background: #fff url('../assets/img/renewal/project_mock_01.png')center no-repeat;
+        background: #fff url('../assets/img/img_row/project_mock_01.jpg')center no-repeat;
         background-size: contain;
     }
     .cbp03{
-        background: #fff url('../assets/img/renewal/project_mock_03.png')center no-repeat;
+        background: #fff url('../assets/img/img_row/project_mock_03.jpg')center no-repeat;
         background-size: contain;
     }
     .ctBoxInfo{

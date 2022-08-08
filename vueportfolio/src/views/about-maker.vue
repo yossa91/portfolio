@@ -40,9 +40,9 @@
                         <div>
                             <h3>자격증</h3>
                             <ul>
-                                <li>자격증명 자격증명 / 11.04</li>
-                                <li>자격증명 자격증명 / 11.04</li>
-                                <li>자격증명 자격증명 / 11.04</li>
+                                <li>웹디자인기능사 / 17.09</li>
+                                <li>GTQ 1,2급 / 11.06</li>
+                                <li>그래픽스운용기능사 / 11.04</li>
                             </ul>
                         </div>
                         <div>
@@ -93,6 +93,11 @@
 
     export default{
         name : 'about-maker',
+        data() {
+            return {
+                /*data type 내보내는법...*/
+            }
+        },
         mounted() {
                 //사이드메뉴 열기,닫기
                 var sideBtn = document.querySelector('.introIcoSidemenu');
@@ -114,7 +119,7 @@
                         document.querySelector('.introMainClose').style.opacity = 1;
                         document.querySelector('.introMainClose').style.zIndex = 99;
                             setTimeout(() => {
-                               location.replace('/' + page);
+                               location.href='/' + page ;
                             }, 100);
                     }, 1000);
                 }
@@ -401,7 +406,8 @@
         width: 350px;
         height: 350px;
         border-radius: 50%;
-        background: url('../assets/img/about/me.png')center no-repeat;
+        background: url('../assets/img/img_row/me.jpg')center no-repeat;
+        background-size: cover;
         box-shadow: 50px 0px 0px 0px #2C50FA;   
     }
     .abMePhotoClip{

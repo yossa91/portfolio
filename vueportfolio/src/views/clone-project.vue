@@ -201,7 +201,7 @@
                         document.querySelector('.introMainClose').style.opacity = 1;
                         document.querySelector('.introMainClose').style.zIndex = 99;
                             setTimeout(() => {
-                               location.replace('/' + page);
+                               location.href='/' + page ;
                             }, 100);
                     }, 1000);
                 }
@@ -483,15 +483,15 @@
         height: 450px;
     }
     .cbp01{
-        background: #fff url('../assets/img/clone/clone_mock_01.png')center no-repeat;
+        background: #fff url('../assets/img/img_row/clone_mock_01.jpg')center no-repeat;
         background-size: contain;
     }
     .cbp02{
-        background: #fff url('../assets/img/clone/clone_mock_02.png')center no-repeat;
+        background: #fff url('../assets/img/img_row/clone_mock_02.jpg')center no-repeat;
         background-size: contain;
     }
     .cbp03{
-        background: #fff url('../assets/img/clone/clone_mock_03.png')center no-repeat;
+        background: #fff url('../assets/img/img_row/clone_mock_03.jpg')center no-repeat;
         background-size: contain;
     }
     .ctBoxInfo{
