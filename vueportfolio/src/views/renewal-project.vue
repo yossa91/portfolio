@@ -186,14 +186,14 @@
                         <article class="contentDtEl">
                             <h4>노원문화원 웹 리뉴얼 사이트</h4>
                             <p>반응형 리뉴얼 사이트</p>
-                            <img src="../assets/img/img_row/project_mockup_01_01.jpg" alt="">
-                            <img src="../assets/img/img_row/project_mockup_01_02.jpg" alt="">
+                            <img src="../assets/img/img_row/project_mockup_02_01.jpg" alt="">
+                            <img src="../assets/img/img_row/project_mockup_02_02.jpg" alt="">
                         </article>
                         <article class="contentDtEl">
                             <h4>서문시장야시장 웹 리뉴얼 사이트</h4>
                             <p>반응형 리뉴얼 사이트</p>
-                            <img src="../assets/img/img_row/project_mockup_02_01.jpg" alt="">
-                            <img src="../assets/img/img_row/project_mockup_02_02.jpg" alt="">
+                            <img src="../assets/img/img_row/project_mockup_01_01.jpg" alt="">
+                            <img src="../assets/img/img_row/project_mockup_01_02.jpg" alt="">
                         </article>
                         <article class="contentDtEl">
                             <h4>그린씽 웹 리뉴얼 사이트</h4>
